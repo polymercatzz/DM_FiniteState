@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DM: FSM with No Output / FSA</title>
+  <link rel="stylesheet" href="styles/base.css?v=layout-fill-2">
+  <link rel="stylesheet" href="styles/sidebar.css?v=sidebar-polish-1">
+  <link rel="stylesheet" href="styles/content-sections.css?v=fsa-ux-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body data-page="fsa">
+  <div class="app-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="true" aria-label="ย่อ sidebar" title="ย่อ sidebar">
+      <svg class="sidebar-toggle__collapse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="sidebar-toggle__expand" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="sidebar-brand__mark">DM</span>
+          <div>
+            <h2>Discrete Math</h2>
+            <p>Models of Computation</p>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="เมนูบทเรียน">
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Root</p>
+          <a href="index.html" class="nav-link" data-page="home">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 6h6a3 3 0 0 1 0 6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 12H7a3 3 0 0 0 0 6h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Learning Tree</strong>
+              <small>Study guide root</small>
+            </span>
+          </a>
+          <a href="introduction.html" class="nav-link" data-page="intro">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M12 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7 9.5l5-2.5 5 2.5-5 2.5-5-2.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Introduction</strong>
+              <small>Concept map</small>
+            </span>
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Finite-State Machines</p>
+          <a href="fsm-output.html" class="nav-link" data-page="fsm-output">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 11l6-3M9 13l6 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM with Output</strong>
+              <small>Live vending lab</small>
+            </span>
+          </a>
+          <a href="working-fsm.html" class="nav-link" data-page="working-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h9a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 4l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 16l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Working with FSM</strong>
+              <small>String simulator</small>
+            </span>
+          </a>
+          <a href="recognition-fsm.html" class="nav-link" data-page="recognition-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 12h4l2-5 4 10 2-5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M5 5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM Recognition</strong>
+              <small>Substring 111</small>
+            </span>
+          </a>
+          <a href="fsa.html" class="nav-link" data-page="fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="4.8" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="2.8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2.5 12h2.2M11 12h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSA</strong>
+              <small>Final-state decision</small>
+            </span>
+          </a>
+          <a href="language-recognition.html" class="nav-link" data-page="language-recognition">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 7h14M5 12h10M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M17 10l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Language Recognition</strong>
+              <small>L(M) membership</small>
+            </span>
+          </a>
+          <a href="designing-fsa.html" class="nav-link" data-page="designing-fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h14M5 12h14M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8 4v16M16 4v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Designing FSA</strong>
+              <small>Transition builder</small>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="page-fsa" class="page-section active">
+        <header class="content-header fsa-hero">
+          <span class="hero-kicker">Lesson 05</span>
+          <h1>FSM with No Output / FSA</h1>
+          <p>Finite-State Machine แบบไม่มี Output เรียกว่า <strong>Finite-State Automaton (FSA)</strong> เครื่องจะอ่าน input และตัดสินผลจาก state สุดท้ายหลังอ่านครบทั้ง string</p>
+          <div class="fsa-hero__actions" aria-label="ทางลัดบทเรียน">
+            <a class="lesson-action lesson-action--primary" href="#fsa-lab">เริ่มตามหา End State</a>
+            <a class="lesson-action lesson-action--secondary" href="#fsa-compare">เปรียบเทียบ FSM กับ FSA</a>
+          </div>
+          <div class="fsa-decision-summary" aria-label="สรุปวิธีตัดสินผล">
+            <span>FSM with Output</span><i aria-hidden="true">→</i><strong>ตัดสินจาก Output</strong>
+            <span>FSA</span><i aria-hidden="true">→</i><strong>ตัดสินจาก End State ∈ F</strong>
+          </div>
+        </header>
+
+        <article class="fsa-foundations lesson-flow" aria-labelledby="fsa-definition-title">
+          <section class="fsa-definition-section">
+            <div class="fsa-definition-intro">
+              <span class="lesson-label">Definition</span>
+              <span class="fsa-subsection-kicker">Machine Definition</span>
+              <h2 id="fsa-definition-title">Finite-State Automaton</h2>
+              <p>กำหนด FSA ด้วย 5-tuple โดยไม่มี output alphabet <code>O</code> และ output function <code>g</code></p>
+              <div class="fsa-formula" aria-label="M equals S I f s zero F">M = (S, I, f, s<sub>0</sub>, F)</div>
+              <p class="fsa-formula-note">ไม่มี <code>O</code> และ <code>g</code> — FSA สนใจเส้นทางและ end state เท่านั้น</p>
+            </div>
+            <dl class="fsa-symbol-grid">
+              <div><dt>S</dt><dd><strong>States</strong><span>เซตของสถานะทั้งหมดที่เครื่องสามารถอยู่ได้</span></dd></div>
+              <div><dt>I</dt><dd><strong>Input alphabet</strong><span>เซตของสัญลักษณ์ input ที่เครื่องอ่านได้</span></dd></div>
+              <div><dt>f</dt><dd><strong>Transition function</strong><span>กำหนด state ถัดไปจาก state ปัจจุบันและ input: <code>f: S × I → S</code></span></dd></div>
+              <div><dt>s<sub>0</sub></dt><dd><strong>Start state</strong><span>สถานะเริ่มต้นก่อนเครื่องอ่าน input ตัวแรก</span></dd></div>
+              <div><dt>F</dt><dd><strong>Set of final states</strong><span>เซตของสถานะยอมรับ ถ้า end state อยู่ใน F ผลคือ Accepted</span></dd></div>
+              </dl>
+              <div class="fsa-definition-summary" role="list" aria-label="สรุปองค์ประกอบของเครื่อง">
+                <div role="listitem"><span>S</span><strong>{s0, s1, s2, s3}</strong></div>
+                <div role="listitem"><span>I</span><strong>{0, 1}</strong></div>
+                <div role="listitem"><span>s0</span><strong>Start state</strong></div>
+                <div role="listitem"><span>F</span><strong>{s0, s1, s2, s3}</strong></div>
+              </div>
+            </section>
+
+          <section class="fsa-compare-section" id="fsa-compare" aria-labelledby="fsa-compare-title">
+            <div>
+              <span class="lesson-label">Compare</span>
+              <h2 id="fsa-compare-title">FSM with Output vs FSA</h2>
+              <p>ความต่างสำคัญคือสิ่งที่ใช้ตัดสินผลหลังอ่าน input</p>
+            </div>
+            <div class="fsa-compare-table-wrap" tabindex="0" role="region" aria-label="ตารางเปรียบเทียบ เลื่อนได้ในแนวนอน">
+              <p class="fsa-table-mobile-hint">เลื่อนตารางในแนวนอนเพื่อดูทั้งสองคอลัมน์</p>
+              <table class="fsa-compare-table">
+                <caption class="visually-hidden">เปรียบเทียบ FSM with Output กับ FSA</caption>
+                <thead><tr><th scope="col">หัวข้อ</th><th scope="col">FSM with Output</th><th scope="col">FSA</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Output</th><td>มี Output</td><td>ไม่มี Output</td></tr>
+                  <tr><th scope="row">Output alphabet</th><td>มี <code>O</code></td><td>ไม่มี <code>O</code></td></tr>
+                  <tr><th scope="row">Output function</th><td>มี <code>g</code></td><td>ไม่มี <code>g</code></td></tr>
+                  <tr><th scope="row">Decision source</th><td>ใช้ Output ตัดสิน</td><td>ใช้ Final State ตัดสิน</td></tr>
+                  <tr><th scope="row">Edge label</th><td>Edge = Input, Output</td><td>Edge = Input</td></tr>
+                  <tr><th scope="row">Machine tuple</th><td><code>M = (S, I, O, f, g, s<sub>0</sub>)</code></td><td><code>M = (S, I, f, s<sub>0</sub>, F)</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="final-state-note"><span aria-hidden="true"></span><strong>Final State</strong> ใน State Diagram เขียนเป็นวงกลมสองชั้น</p>
+          </section>
+        </article>
+
+        <section class="fsa-lab" id="fsa-lab" aria-labelledby="fsa-lab-title">
+          <div class="fsa-panel fsa-panel--control">
+            <div class="fsa-panel__header">
+              <div class="fsa-panel__heading-row">
+                <div><span class="lesson-label">End State Detective</span><h2 id="fsa-lab-title">ตามหา End State</h2></div>
+                <button class="how-to-trigger" id="open-fsa-how-to" type="button" aria-haspopup="dialog" aria-controls="fsa-how-to-dialog"><span aria-hidden="true">!</span> วิธีเล่น</button>
+              </div>
+            </div>
+            <ol class="fsa-workflow" aria-label="ขั้นตอนการใช้งาน">
+              <li><span>01</span><strong>Read Rule</strong><small>ดู transition table</small></li>
+              <li><span>02</span><strong>Build String</strong><small>สร้าง binary input</small></li>
+              <li><span>03</span><strong>Predict</strong><small>เลือก end state</small></li>
+              <li><span>04</span><strong>Trace &amp; Decide</strong><small>ตรวจเส้นทางและสมาชิกของ F</small></li>
+            </ol>
+
+            <div class="fsa-problem-statement">
+              <span class="fsa-subsection-kicker">Machine Definition</span>
+              <p>สร้าง binary string แล้วทาย end state ก่อนกด Run ระบบจะเฉลยเส้นทางทีละ step</p>
+              <p>กำหนด <code>M = (S, I, f, s<sub>0</sub>, F)</code> เมื่อ <code>S = {s<sub>0</sub>, s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub>}</code>, <code>I = {0, 1}</code> และ <code>F = {s<sub>0</sub>, s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub>}</code></p>
+              <p class="fsa-problem-emphasis">ทุก state อยู่ใน F; สิ่งที่ต้องทายคือ end state</p>
+            </div>
+            <div class="fsa-problem-summary" role="list" aria-label="สรุปโจทย์">
+              <div role="listitem"><span>S</span><strong>{s0, s1, s2, s3}</strong></div>
+              <div role="listitem"><span>I</span><strong>{0, 1}</strong></div>
+              <div role="listitem"><span>s0</span><strong>Start state</strong></div>
+              <div role="listitem"><span>F</span><strong>S — ทุก state เป็น final</strong></div>
+            </div>
+            <span class="fsa-subsection-kicker fsa-transition-kicker">Transition Rule</span>
+            <div class="fsa-problem-table-wrap fsa-problem-table-wrap--compact" tabindex="0" role="region" aria-label="ตาราง transition rule ของโจทย์">
+              <table class="fsa-problem-table">
+                <caption class="visually-hidden">Transition function f ของ End State Detective</caption>
+                <thead><tr><th scope="col" rowspan="2">State</th><th scope="col" colspan="2"><i>f</i> · Input</th></tr><tr><th scope="col">0</th><th scope="col">1</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">s<sub>0</sub></th><td>s<sub>0</sub></td><td>s<sub>1</sub></td></tr>
+                  <tr><th scope="row">s<sub>1</sub></th><td>s<sub>0</sub></td><td>s<sub>2</sub></td></tr>
+                  <tr><th scope="row">s<sub>2</sub></th><td>s<sub>0</sub></td><td>s<sub>3</sub></td></tr>
+                  <tr><th scope="row">s<sub>3</sub></th><td>s<sub>2</sub></td><td>s<sub>1</sub></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <form class="fsa-form" id="fsa-form" novalidate>
+              <div class="fsa-step-label">02 Build String</div>
+              <label class="field-group" for="fsa-input">
+                <span>Binary string</span>
+                <input id="fsa-input" type="text" placeholder="เช่น 10110" autocomplete="off" spellcheck="false" aria-describedby="fsa-input-hint fsa-error">
+              </label>
+              <p class="fsa-input-hint" id="fsa-input-hint">ใช้เฉพาะ 0 และ 1; ระบบจะตัดช่องว่างออกก่อน Run</p>
+
+              <div class="binary-keypad" aria-label="ปุ่มเพิ่ม binary bit">
+                <button type="button" class="bit-chip" data-fsa-bit="0" aria-label="เพิ่มเลข 0">0</button>
+                <button type="button" class="bit-chip" data-fsa-bit="1" aria-label="เพิ่มเลข 1">1</button>
+                <button type="button" class="bit-chip bit-chip--utility" id="fsa-remove-bit" aria-label="ลบ bit ตัวสุดท้าย">⌫ <span>ลบล่าสุด</span></button>
+                <button type="button" class="bit-chip bit-chip--utility" id="fsa-clear-input" aria-label="ล้าง binary string">Clear</button>
+              </div>
+
+              <div class="fsa-step-label">03 Predict End State</div>
+              <fieldset class="end-state-choice">
+                <legend>Prediction: end state</legend>
+                <label><input type="radio" name="end-state-prediction" value="s0" checked><span>s0</span></label>
+                <label><input type="radio" name="end-state-prediction" value="s1"><span>s1</span></label>
+                <label><input type="radio" name="end-state-prediction" value="s2"><span>s2</span></label>
+                <label><input type="radio" name="end-state-prediction" value="s3"><span>s3</span></label>
+              </fieldset>
+
+              <p class="form-message" id="fsa-error" role="status" aria-live="polite" aria-atomic="true"></p>
+
+              <div class="form-actions">
+                <span class="fsa-step-label">04 Run &amp; Trace</span>
+                <button class="lesson-action lesson-action--primary run-button" type="submit">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M8 5v14l11-7-11-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Run</span>
+                </button>
+                <button class="lesson-action lesson-action--secondary reset-button" id="fsa-reset" type="button">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 12a8 8 0 1 1-2.34-5.66" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 4v6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Reset</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="fsa-panel fsa-panel--simulation" id="fsa-results" tabindex="-1">
+            <div class="visually-hidden" id="fsa-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+            <div class="fsa-simulation-heading">
+              <div><span class="lesson-label">ผลลัพธ์ทีละขั้น</span><h2>การทำงาน</h2></div>
+              <span class="simulation-status" id="fsa-simulation-status">รอการ Run</span>
+            </div>
+
+            <div class="fsa-diagram" aria-label="FSA state diagram ของโจทย์">
+              <svg viewBox="0 0 760 360" role="img" aria-labelledby="fsa-diagram-title fsa-diagram-desc">
+                <title id="fsa-diagram-title">State diagram ของ FSA</title>
+                <desc id="fsa-diagram-desc">มี start state s0 และ final states ทั้งสี่ state ได้แก่ s0, s1, s2 และ s3</desc>
+                <defs><marker id="fsa-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z"/></marker><marker id="fsa-arrow-active" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z"/></marker></defs>
+                <g class="diagram-edge" marker-end="url(#fsa-arrow)">
+                  <path d="M30 180 H126"/><text x="36" y="166">Start</text>
+                  <path data-fsa-edge="s0-0-s0" d="M164 137 C130 50 250 42 235 132"/><text x="178" y="48">0</text>
+                  <path data-fsa-edge="s0-1-s1" d="M236 151 L330 90"/><text x="280" y="105">1</text>
+                  <path data-fsa-edge="s1-0-s0" d="M332 111 L238 172"/><text x="282" y="164">0</text>
+                  <path data-fsa-edge="s1-1-s2" d="M380 129 V231"/><text x="394" y="186">1</text>
+                  <path data-fsa-edge="s2-0-s0" d="M340 265 L230 204"/><text x="276" y="257">0</text>
+                  <path data-fsa-edge="s2-1-s3" d="M426 294 C520 334 620 286 640 228"/><text x="535" y="315">1</text>
+                  <path data-fsa-edge="s3-1-s1" d="M614 141 L430 87"/><text x="521" y="100">1</text>
+                  <path data-fsa-edge="s3-0-s2" d="M615 218 L426 271"/><text x="522" y="265">0</text>
+                </g>
+                <g class="diagram-state is-final" data-fsa-state="s0" role="group" aria-label="s0, final state, start state" transform="translate(190 180)"><circle r="53"/><circle r="45"/><text>s0</text><text class="diagram-state__marker" y="70" aria-hidden="true">Current</text></g>
+                <g class="diagram-state is-final" data-fsa-state="s1" role="group" aria-label="s1, final state" transform="translate(380 80)"><circle r="50"/><circle r="42"/><text>s1</text><text class="diagram-state__marker" y="67" aria-hidden="true">Current</text></g>
+                <g class="diagram-state is-final" data-fsa-state="s2" role="group" aria-label="s2, final state" transform="translate(380 280)"><circle r="50"/><circle r="42"/><text>s2</text><text class="diagram-state__marker" y="67" aria-hidden="true">Current</text></g>
+                <g class="diagram-state is-final" data-fsa-state="s3" role="group" aria-label="s3, final state" transform="translate(660 180)"><circle r="53"/><circle r="45"/><text>s3</text><text class="diagram-state__marker" y="70" aria-hidden="true">Current</text></g>
+              </svg>
+            </div>
+
+            <dl class="fsa-status-strip">
+              <div>
+                <dt>Current state</dt>
+                <dd id="fsa-current-state">s0</dd>
+              </div>
+              <div>
+                <dt>Input cursor</dt>
+                <dd id="fsa-cursor">0 / 0</dd>
+              </div>
+              <div>
+                <dt>Start state</dt>
+                <dd>s0</dd>
+              </div>
+              <div>
+                <dt>Final states</dt>
+                <dd>F = {s0, s1, s2, s3}</dd>
+              </div>
+            </dl>
+
+            <div class="fsa-tape-block">
+              <span class="fsa-tape-label">Input Tape</span>
+              <div class="fsa-bit-tape" id="fsa-bit-tape" aria-label="Input tape">-</div>
+            </div>
+
+            <div class="fsa-step-note" id="fsa-step-note" hidden></div>
+
+            <div class="fsa-step-toolbar" id="fsa-step-toolbar" hidden>
+              <button class="step-button" id="fsa-previous-step" type="button" disabled aria-label="ย้อนกลับหนึ่ง step">← ย้อนกลับ</button>
+              <div class="step-progress"><span id="fsa-step-counter">Step 0 / 0</span><div class="step-progress__track" role="progressbar" aria-label="ความคืบหน้า step" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" aria-valuetext="Step 0 จาก 0"><i id="fsa-step-progress-bar"></i></div><small>กดปุ่มเพื่อหยุด autoplay และตรวจเส้นทางเอง</small></div>
+              <button class="step-button step-button--next" id="fsa-next-step" type="button" aria-label="ไปยัง step ถัดไป">ถัดไป →</button>
+            </div>
+
+            <div class="simulation-table-wrap" tabindex="0" role="region" aria-label="ผล simulation เลื่อนได้ในแนวนอน">
+              <p class="simulation-table__mobile-hint">เลื่อนตารางในแนวนอนเพื่อดูทุกคอลัมน์</p>
+              <table class="fsa-table">
+                <caption class="visually-hidden">ตารางเส้นทาง state ของ FSA แยกตาม input step</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">ขั้น</th><th scope="col">สถานะปัจจุบัน</th><th scope="col">อินพุต</th><th scope="col">สถานะถัดไป</th><th scope="col">เส้นทาง State</th>
+                  </tr>
+                </thead>
+                <tbody id="fsa-body">
+                  <tr class="is-empty">
+                    <td colspan="5">ยังไม่มี simulation</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="fsa-conclusion" id="fsa-conclusion" hidden>
+              <div class="fsa-conclusion__end-state"><span>End state</span><strong id="fsa-end-state"></strong></div>
+              <div class="fsa-conclusion__prediction"><span>Your prediction</span><strong id="fsa-prediction"></strong><p id="fsa-feedback"></p></div>
+              <div class="fsa-conclusion__decision"><span>Machine decision</span><strong id="fsa-result"></strong><p>โจทย์นี้ทุก state เป็น final state จึง Accepted ทุกคำตอบที่เป็น binary string</p></div>
+              <p class="fsa-conclusion__reason"><span>Why</span><strong>End state ∈ F</strong></p>
+            </div>
+          </div>
+        </section>
+
+        <dialog class="fsa-how-to" id="fsa-how-to-dialog" aria-labelledby="fsa-how-to-title">
+          <div class="fsa-how-to__header"><div><span>QUICK START</span><h2 id="fsa-how-to-title">วิธีเล่น End State Detective</h2></div><button id="close-fsa-how-to" type="button" aria-label="ปิดวิธีเล่น">×</button></div>
+          <p class="fsa-how-to__duration">ใช้เวลาประมาณ 1 นาที</p>
+          <ol class="fsa-how-to__steps">
+            <li><span>1</span><p>สร้าง <strong>Binary string</strong> โดยพิมพ์เองหรือกด chip <strong>0</strong> และ <strong>1</strong></p></li>
+            <li><span>2</span><p>ใช้ transition table ทายว่าเมื่ออ่านครบแล้วเครื่องจะหยุดที่ state ใด</p></li>
+            <li><span>3</span><p>กด <strong>Run</strong> ระบบจะเฉลยการย้าย state ทีละ step โดยอัตโนมัติ</p></li>
+            <li><span>4</span><p>เมื่อเฉลยครบ เปรียบเทียบ end state กับคำตอบที่ทายไว้ แล้วใช้ปุ่ม <strong>ย้อนกลับ</strong> และ <strong>ถัดไป</strong> เพื่อทบทวน</p></li>
+          </ol>
+        </dialog>
+
+        <article class="lesson-flow fsa-reflection" id="fsa-key-idea">
+          <section class="lesson-section lesson-section--split">
+            <div>
+              <span class="lesson-label">Compare</span>
+              <h2>บทนี้ตัดสินจาก end state</h2>
+              <p>FSM with output ในบทก่อนใช้ output ที่เครื่องผลิตออกมา แต่ FSA ไม่มีการผลิตผลระหว่างทาง จึงตัดสินหลังอ่าน input จบว่า end state อยู่ใน set <code>F</code> หรือไม่</p>
+            </div>
+            <div class="fsa-definition-card" aria-label="FSA definition">
+              <code>M = (S, I, f, s0, F)</code>
+              <span>สิ่งที่หายไปคือ output alphabet <code>O</code> และ output function <code>g</code></span>
+              <strong class="fsa-rule-line">End state ∈ F → Accepted; End state ∉ F → Rejected</strong>
+              <small>ในโจทย์ของหน้านี้ F = S</small>
+            </div>
+          </section>
+
+          <nav class="lesson-navigation" aria-label="Lesson navigation">
+            <div class="lesson-navigation__previous">
+              <span>Previous Lesson</span>
+              <a class="lesson-action lesson-action--secondary" href="recognition-fsm.html">← กลับไป FSM Recognition</a>
+            </div>
+            <div class="lesson-navigation__next">
+              <span>Next Lesson</span>
+              <a class="lesson-action lesson-action--primary" href="language-recognition.html">เรียน Language Recognition →</a>
+            </div>
+          </nav>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/sidebar.js?v=multi-page"></script>
+  <script src="scripts/fsaSimulator.js?v=fsa-ux-1"></script>
+</body>
+
+</html>
+
+

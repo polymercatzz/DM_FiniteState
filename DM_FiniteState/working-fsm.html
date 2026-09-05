@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DM: Working with FSM</title>
+  <link rel="stylesheet" href="styles/base.css?v=layout-fill-2">
+  <link rel="stylesheet" href="styles/sidebar.css?v=sidebar-polish-1">
+  <link rel="stylesheet" href="styles/content-sections.css?v=working-auto-run-3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body data-page="working-fsm">
+  <div class="app-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="true" aria-label="ย่อ sidebar" title="ย่อ sidebar">
+      <svg class="sidebar-toggle__collapse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="sidebar-toggle__expand" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="sidebar-brand__mark">DM</span>
+          <div>
+            <h2>Discrete Math</h2>
+            <p>Models of Computation</p>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="เมนูบทเรียน">
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Root</p>
+          <a href="index.html" class="nav-link" data-page="home">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 6h6a3 3 0 0 1 0 6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 12H7a3 3 0 0 0 0 6h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Learning Tree</strong>
+              <small>Study guide root</small>
+            </span>
+          </a>
+          <a href="introduction.html" class="nav-link" data-page="intro">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M12 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7 9.5l5-2.5 5 2.5-5 2.5-5-2.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Introduction</strong>
+              <small>Concept map</small>
+            </span>
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Finite-State Machines</p>
+          <a href="fsm-output.html" class="nav-link" data-page="fsm-output">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 11l6-3M9 13l6 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM with Output</strong>
+              <small>Live vending lab</small>
+            </span>
+          </a>
+          <a href="working-fsm.html" class="nav-link" data-page="working-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h9a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 4l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 16l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Working with FSM</strong>
+              <small>Input/output strings</small>
+            </span>
+          </a>
+          <a href="recognition-fsm.html" class="nav-link" data-page="recognition-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 12h4l2-5 4 10 2-5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M5 5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM Recognition</strong>
+              <small>Substring 111</small>
+            </span>
+          </a>
+          <a href="fsa.html" class="nav-link" data-page="fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="4.8" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="2.8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2.5 12h2.2M11 12h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSA</strong>
+              <small>Final-state decision</small>
+            </span>
+          </a>
+          <a href="language-recognition.html" class="nav-link" data-page="language-recognition">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 7h14M5 12h10M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M17 10l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Language Recognition</strong>
+              <small>L(M) membership</small>
+            </span>
+          </a>
+          <a href="designing-fsa.html" class="nav-link" data-page="designing-fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h14M5 12h14M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8 4v16M16 4v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Designing FSA</strong>
+              <small>Transition builder</small>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="page-working-fsm" class="page-section active">
+        <header class="content-header working-hero">
+          <span class="hero-kicker">Lesson 03</span>
+          <h1>Working with FSM</h1>
+          <p>อ่าน input string จากซ้ายไปขวา แล้วดูว่า current state, input, next state และ output ประกอบกันเป็น output string ได้อย่างไร</p>
+          <div class="working-hero__actions" aria-label="ทางลัดบทเรียน">
+            <a class="lesson-action lesson-action--primary" href="#working-lab">เริ่มสร้าง Input String</a>
+            <a class="lesson-action lesson-action--secondary" href="#input-string-concept">อ่านหลักการก่อน</a>
+          </div>
+        </header>
+
+        <article class="lesson-flow">
+          <section class="lesson-section" id="input-string-concept">
+            <span class="lesson-label">Input String</span>
+            <h2>เครื่องไม่ได้จำเหรียญทั้งหมด แต่จำยอดผ่าน state</h2>
+            <p>ตัวอย่าง <code>5 10 10 O</code> คือ input string ที่มี symbol 4 ตัวใน alphabet <code>I = {5, 10, O, R}</code> ทุกครั้งที่อ่าน input หนึ่งตัว เครื่องจะเปลี่ยน state และสร้าง output ของ step นั้นทันที</p>
+          </section>
+        </article>
+
+        <section class="working-lab" id="working-lab" aria-labelledby="working-lab-title">
+          <div class="working-lab__panel working-lab__panel--control">
+            <div class="working-lab__header">
+              <div class="working-lab__heading-row">
+                <div>
+                  <span class="lesson-label">Predict then Run</span>
+                  <h2 id="working-lab-title">Vending Machine String Simulator</h2>
+                </div>
+                <button class="how-to-trigger" id="open-working-how-to" type="button" aria-haspopup="dialog" aria-controls="working-how-to-dialog">
+                  <span aria-hidden="true">!</span>
+                  วิธีเล่น
+                </button>
+              </div>
+              <p>ก่อนกด Run ให้เดา output string แล้วค่อยตรวจทีละ transition</p>
+              <ol class="working-workflow" aria-label="ขั้นตอนการใช้งาน">
+                <li><span>01</span><strong>Build Input</strong><small>สร้างลำดับที่เครื่องจะอ่าน</small></li>
+                <li><span>02</span><strong>Predict Output</strong><small>เดาผลลัพธ์ให้ครบจำนวน step</small></li>
+                <li><span>03</span><strong>Run &amp; Inspect</strong><small>ดู state และตรวจคำตอบทีละขั้น</small></li>
+              </ol>
+            </div>
+
+            <form class="string-form" id="working-fsm-form" novalidate>
+              <div class="string-composer">
+                <div class="composer-heading"><span class="composer-step">01</span><strong>Build Input</strong></div>
+                <label class="field-group" for="input-string">
+                  <span>Input string</span>
+                  <input id="input-string" type="text" placeholder="กดปุ่มด้านล่าง เช่น 5 10 10 O" autocomplete="off" spellcheck="false" aria-describedby="input-builder-hint alphabet-note input-error">
+                </label>
+                <span class="composer-lock-status">ล็อกอยู่ — กด Reset เพื่อแก้ไข</span>
+                <div class="string-builder" data-builder-for="input-string">
+                  <p id="input-builder-hint">กดเรียงลำดับ input (สูงสุด 8 symbols)</p>
+                  <div class="string-builder__buttons" aria-label="ปุ่มสร้าง input string">
+                    <button class="symbol-chip" type="button" data-string-target="input-string" data-symbol="5"><strong>5</strong><small>เหรียญ</small></button>
+                    <button class="symbol-chip" type="button" data-string-target="input-string" data-symbol="10"><strong>10</strong><small>เหรียญ</small></button>
+                    <button class="symbol-chip" type="button" data-string-target="input-string" data-symbol="O"><strong>O</strong><small>Cornae</small></button>
+                    <button class="symbol-chip" type="button" data-string-target="input-string" data-symbol="R"><strong>R</strong><small>Party</small></button>
+                    <button class="builder-tool" type="button" data-string-target="input-string" data-action="undo" aria-label="ลบ input ตัวล่าสุด" title="ลบตัวล่าสุด">⌫</button>
+                    <button class="builder-tool builder-tool--clear" type="button" data-string-target="input-string" data-action="clear">ล้าง</button>
+                  </div>
+                </div>
+                <p class="alphabet-note" id="alphabet-note">Input alphabet: <code>{5, 10, O, R}</code></p>
+              </div>
+
+              <div class="string-composer">
+                <div class="composer-heading"><span class="composer-step">02</span><strong>Predict Output</strong></div>
+                <label class="field-group" for="prediction-string">
+                  <span>Prediction: output string</span>
+                  <input id="prediction-string" type="text" placeholder="เดาผลด้วยปุ่ม เช่น n n 5 Cornae" autocomplete="off" spellcheck="false" aria-describedby="prediction-builder-hint prediction-count-hint prediction-limit-status">
+                </label>
+                <span class="composer-lock-status">ล็อกอยู่ — กด Reset เพื่อแก้ไข</span>
+                <div class="string-builder string-builder--output" data-builder-for="prediction-string">
+                  <div class="string-builder__hint-row">
+                    <p id="prediction-builder-hint">กดเรียงลำดับ output ที่คาดว่าจะได้</p>
+                    <span id="prediction-limit-status" aria-live="polite">Prediction 0 / 0 symbols</span>
+                  </div>
+                  <div class="string-builder__buttons" aria-label="ปุ่มสร้าง prediction output string">
+                    <button class="symbol-chip" type="button" data-string-target="prediction-string" data-symbol="n"><strong>n</strong><small>ไม่มี output</small></button>
+                    <button class="symbol-chip" type="button" data-string-target="prediction-string" data-symbol="5"><strong>5</strong><small>เงินทอน</small></button>
+                    <button class="symbol-chip" type="button" data-string-target="prediction-string" data-symbol="10"><strong>10</strong><small>เงินทอน</small></button>
+                    <button class="symbol-chip" type="button" data-string-target="prediction-string" data-symbol="Cornae"><strong>Cornae</strong><small>สินค้า O</small></button>
+                    <button class="symbol-chip" type="button" data-string-target="prediction-string" data-symbol="Party"><strong>Party</strong><small>สินค้า R</small></button>
+                    <button class="builder-tool" type="button" data-string-target="prediction-string" data-action="undo" aria-label="ลบ prediction ตัวล่าสุด" title="ลบตัวล่าสุด">⌫</button>
+                    <button class="builder-tool builder-tool--clear" type="button" data-string-target="prediction-string" data-action="clear">ล้าง</button>
+                  </div>
+                </div>
+                <div class="prediction-track" id="prediction-track" aria-label="สถานะคำตอบแต่ละ step"></div>
+                <p class="prediction-count-hint" id="prediction-count-hint">จำนวน prediction ต้องเท่ากับจำนวน input เพื่อให้ตรวจครบทุก step</p>
+              </div>
+              <p class="form-message" id="input-error" role="status" aria-live="polite" aria-atomic="true"></p>
+              <div class="form-actions">
+                <span class="form-actions__label">03 Run &amp; Inspect</span>
+                <div class="form-actions__buttons">
+                <button class="lesson-action lesson-action--primary run-button" id="run-working-fsm" type="submit">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M8 5v14l11-7-11-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  </svg>
+                  <span id="run-working-fsm-label">เริ่ม Run ทีละ Step</span>
+                </button>
+                <button class="lesson-action lesson-action--secondary reset-button" id="reset-working-fsm" type="button">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 12a8 8 0 1 1-2.34-5.66" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 4v6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Reset</span>
+                </button>
+                <span class="run-status" id="run-status"></span>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="working-lab__panel working-lab__panel--simulation">
+            <div class="visually-hidden" id="working-step-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+            <div class="simulation-panel__header">
+              <span class="simulation-panel__eyebrow">RESULT TRACE</span>
+              <h2>Step-by-step Simulation</h2>
+              <p>ผลจะแสดงอัตโนมัติและเปิดให้ย้อนดูเมื่อรันครบ</p>
+            </div>
+            <div class="step-focus">
+              <div>
+                <span class="step-focus__label">Current Step</span>
+                <strong id="step-focus-title">ยังไม่ได้ run</strong>
+              </div>
+              <p id="step-focus-detail">ป้อน input string แล้วกดเริ่ม Run ระบบจะเลื่อนมาที่นี่และทำงานทีละ step</p>
+              <p class="step-answer-status" id="step-answer-status"></p>
+            </div>
+
+            <span class="simulation-label">State Path</span>
+            <div class="state-path" id="state-path" role="list" aria-label="State path">
+              <span role="listitem" data-path-index="0" aria-label="ลำดับที่ 1: s0">s0</span>
+            </div>
+
+            <div class="step-controls__heading">
+              <span class="simulation-label">Review Step</span>
+              <output class="step-count" id="step-count" for="step-slider">Step 0 / 0</output>
+            </div>
+            <div class="step-controls" aria-label="Step controls">
+              <button class="step-button" id="previous-step" type="button" disabled aria-label="ดู step ก่อนหน้า" title="Step ก่อนหน้า">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <input id="step-slider" type="range" min="0" max="0" value="0" disabled aria-label="เลือก step" aria-valuetext="Step 0 จาก 0 ที่เปิดดูได้">
+              <button class="step-button" id="next-step" type="button" disabled aria-label="ดู step ถัดไป" title="Step ถัดไป">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="simulation-table-wrap" tabindex="0" role="region" aria-label="ผล simulation เลื่อนได้ในแนวนอน">
+              <p class="simulation-table__mobile-hint">เลื่อนตารางในแนวนอนเพื่อดูผลทุกคอลัมน์</p>
+              <table class="simulation-table">
+                <caption class="visually-hidden">ผลการทำงานของ FSM แยกตาม step</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Step</th>
+                    <th scope="col">Current State</th>
+                    <th scope="col">Input</th>
+                    <th scope="col">Next State</th>
+                    <th scope="col">Output</th>
+                  </tr>
+                </thead>
+                <tbody id="simulation-body">
+                  <tr class="is-empty">
+                    <td colspan="5">ยังไม่มี simulation</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <dialog class="working-how-to" id="working-how-to-dialog" aria-labelledby="working-how-to-title">
+          <div class="working-how-to__header">
+            <div>
+              <span>QUICK START</span>
+              <h2 id="working-how-to-title">วิธีเล่น String Simulator</h2>
+            </div>
+            <button class="working-how-to__close" id="close-working-how-to" type="button" aria-label="ปิดวิธีเล่น" title="ปิด">×</button>
+          </div>
+          <p class="working-how-to__duration">ใช้เวลาประมาณ 1 นาที</p>
+          <ol class="working-how-to__steps">
+            <li><span>1</span><p>สร้าง <strong>Input string</strong> โดยกดชิป <strong>5, 10, O หรือ R</strong> ตามลำดับที่ต้องการ</p></li>
+            <li><span>2</span><p>เดาผลลัพธ์ แล้วกดชิปใน <strong>Prediction output string</strong> ให้ครบทุก step โดย <code>n</code> หมายถึงยังไม่มีสิ่งที่เครื่องจ่ายออกมา</p></li>
+            <li><span>3</span><p>กด <strong>เริ่ม Run ทีละ Step</strong> เพียงครั้งเดียว ระบบจะเลื่อนไป Current Step และรัน Step 1, 2, 3 ต่อเนื่องจนจบ</p></li>
+            <li><span>4</span><p>คำตอบที่ผิดจะถูก highlight ใน Current Step, แถบ prediction และตาราง เมื่อรันจบแล้วใช้ลูกศรหรือแถบเลื่อนเพื่อย้อนดูได้</p></li>
+          </ol>
+          <div class="working-how-to__legend">
+            <span><strong>O</strong> เลือก Cornae</span>
+            <span><strong>R</strong> เลือก Party</span>
+            <span><strong>⌫</strong> ลบตัวล่าสุด</span>
+          </div>
+        </dialog>
+
+        <article class="lesson-flow working-reflection">
+          <section class="lesson-section lesson-section--split">
+            <div>
+              <span class="lesson-label">Mini Reflection</span>
+              <h2>input เดียวกัน output ต่างกันได้ไหม</h2>
+              <p>ได้ เพราะ FSM with output ใช้คู่ <code>(current state, input)</code> ในการตัดสินใจ ไม่ได้ดู input เพียงอย่างเดียว เช่น input <code>10</code> จาก <code>s1</code> ได้ output <code>n</code> แต่จาก <code>s3</code> ได้ output <code>5</code></p>
+            </div>
+            <div>
+              <h3 class="challenge-list__title">Input strings สำหรับลองรอบถัดไป</h3>
+              <ul class="challenge-list" aria-label="Challenge set">
+                <li><code>5 5 10 R</code></li>
+                <li><code>10 10 O</code></li>
+                <li><code>10 5 10 R</code></li>
+                <li><code>O</code></li>
+                <li><code>5 R 10 10 O</code></li>
+              </ul>
+            </div>
+          </section>
+
+          <nav class="lesson-navigation" aria-label="Lesson navigation">
+            <div class="lesson-navigation__previous">
+              <span>Previous Lesson</span>
+              <a class="lesson-action lesson-action--secondary" href="fsm-output.html">← กลับไป FSM with Output</a>
+            </div>
+            <div class="lesson-navigation__next">
+              <span>Next Lesson</span>
+              <a class="lesson-action lesson-action--primary" href="recognition-fsm.html">เรียน FSM Recognition →</a>
+            </div>
+          </nav>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/sidebar.js?v=multi-page"></script>
+  <script src="scripts/workingFsm.js?v=working-auto-run-4"></script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,335 @@
+:root {
+    --primary-color: #245bdb;
+    --primary-hover: #1e4fc0;
+    --sidebar-bg: #0f172a;
+    --sidebar-hover: #1e293b;
+    --bg-color: #f6f8fc;
+    --card-bg: #ffffff;
+    --text-main: #334155;
+    --text-light: #64748b;
+    --border-color: #e5ebf3;
+
+    /* สีปุ่มเฉพาะกิจ */
+    --btn-orange: #d97706;
+    --btn-red: #dc2626;
+    --radius-card: 8px;
+    --radius-control: 6px;
+    --shadow-soft: 0 8px 18px rgba(15, 23, 42, 0.04);
+    --fsm-bg: #10151c;
+    --fsm-panel: #171d26;
+    --fsm-panel-2: #1f2632;
+    --fsm-border: #2d3644;
+    --fsm-text: #e7edf6;
+    --fsm-muted: #9ca8b8;
+    --fsm-primary: #243d63;
+    --fsm-primary-hover: #2e4d7c;
+    --fsm-accent: #b08a45;
+    --fsm-accent-soft: #d9c08a;
+    --fsm-input: #213149;
+}
+
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.55;
+}
+
+/* โครงสร้าง Layout หลัก */
+.app-container {
+    --sidebar-width: 280px;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ---------------- Main Content ---------------- */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 28px;
+    overflow-y: auto;
+}
+
+.content-header {
+    margin-bottom: 28px;
+}
+
+.content-header h1 {
+    font-size: 1.82rem;
+    color: #0f172a;
+    letter-spacing: 0;
+}
+
+.content-header p {
+    color: var(--text-light);
+    margin-top: 8px;
+    font-size: 1rem;
+    max-width: 68ch;
+    line-height: 1.7;
+}
+
+
+/* ---------------- Placeholder ---------------- */
+.diagram-placeholder {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* การซ่อนและแสดงหน้าจอสำหรับระบบ SPA */
+.page-section {
+    display: none;
+}
+.page-section.active {
+    display: block;
+}
+
+/* ---------------- Academic lesson content ---------------- */
+.lesson-flow {
+    max-width: 1040px;
+}
+
+.lesson-section {
+    padding: clamp(22px, 3vw, 34px) 0;
+    border-bottom: 1px solid #dbe4ee;
+}
+
+.lesson-section:first-child {
+    padding-top: 0;
+}
+
+.lesson-section h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(1.18rem, 2vw, 1.58rem);
+    line-height: 1.28;
+    letter-spacing: 0;
+}
+
+.lesson-section p {
+    max-width: 74ch;
+    margin-top: 12px;
+    color: #475569;
+    line-height: 1.78;
+}
+
+.lesson-section code {
+    padding: 1px 5px;
+    border-radius: 4px;
+    background: #edf2f7;
+    color: #0f172a;
+    font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
+    font-weight: 700;
+}
+
+.lesson-label {
+    display: inline-flex;
+    margin-bottom: 9px;
+    color: #0f766e;
+    font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.lesson-section--lead {
+    display: grid;
+    grid-template-columns: minmax(0, 0.72fr) minmax(320px, 1fr);
+    gap: clamp(22px, 4vw, 56px);
+    align-items: start;
+}
+
+.lesson-section--split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.68fr);
+    gap: clamp(22px, 4vw, 52px);
+}
+
+.learning-goals {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.learning-goals li {
+    position: relative;
+    padding-left: 22px;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.learning-goals li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0f766e;
+}
+
+.lesson-navigation {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.72fr) minmax(260px, 1fr);
+    gap: 16px;
+    align-items: end;
+    padding-top: clamp(26px, 4vw, 42px);
+}
+
+.lesson-navigation__previous,
+.lesson-navigation__next {
+    display: grid;
+    gap: 8px;
+}
+
+.lesson-navigation__next {
+    justify-items: end;
+}
+
+.lesson-navigation span {
+    color: #64748b;
+    font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.lesson-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.lesson-action--primary {
+    min-width: min(100%, 260px);
+    padding: 13px 22px;
+    background: #0f766e;
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(15, 118, 110, 0.18);
+}
+
+.lesson-action--primary:hover {
+    background: #0b615b;
+    transform: translateY(-1px);
+}
+
+.lesson-action--secondary {
+    width: fit-content;
+    min-height: 38px;
+    padding: 6px 0;
+    color: #64748b;
+}
+
+.lesson-action--secondary:hover {
+    color: #0f172a;
+}
+
+@media (max-width: 760px) {
+    .lesson-section--lead,
+    .lesson-section--split,
+    .lesson-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-navigation__next {
+        justify-items: stretch;
+        order: -1;
+    }
+
+    .lesson-action--secondary {
+        width: auto;
+        justify-content: flex-start;
+    }
+}
+
+/* ---------------- Lab console visual refresh ---------------- */
+:root {
+    --primary-color: #0f766e;
+    --primary-hover: #0b615b;
+    --sidebar-bg: #09111f;
+    --bg-color: #edf2f7;
+    --card-bg: rgba(255, 255, 255, 0.94);
+    --text-main: #1f2937;
+    --text-light: #5f6f82;
+    --border-color: #d6e0eb;
+    --shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.09);
+}
+
+* {
+    font-family: 'Sarabun', 'Bai Jamjuree', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+        radial-gradient(circle at 26% 12%, rgba(20, 184, 166, 0.14), transparent 34%),
+        radial-gradient(circle at 88% 4%, rgba(217, 119, 6, 0.12), transparent 31%),
+        #edf2f7;
+    background-size: 32px 32px, 32px 32px, auto, auto, auto;
+}
+
+
+/* ---------------- Focused lesson layout ---------------- */
+body {
+    background: #f3f6f8;
+}
+
+.app-container {
+    background: linear-gradient(90deg, #09111f 0 280px, transparent 280px);
+}
+
+.main-content {
+    padding: clamp(16px, 1.5vw, 24px);
+}
+
+
+/* Keep the lesson header close to the top content edge. */
+.main-content {
+    padding-top: clamp(14px, 2vw, 24px);
+}
+
+.page-section.active,
+.lesson-flow {
+    width: 100%;
+}
+
+.lesson-flow {
+    max-width: none;
+}
+
+@media (max-width: 900px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px 16px 24px;
+    }
+}

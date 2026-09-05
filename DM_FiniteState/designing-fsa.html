@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DM: Designing FSA</title>
+  <link rel="stylesheet" href="styles/base.css?v=layout-fill-2">
+  <link rel="stylesheet" href="styles/sidebar.css?v=sidebar-polish-1">
+  <link rel="stylesheet" href="styles/challenge-sections.css?v=design-studio-2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body data-page="designing-fsa">
+  <div class="app-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="true" aria-label="ย่อ sidebar" title="ย่อ sidebar">
+      <svg class="sidebar-toggle__collapse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="sidebar-toggle__expand" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="sidebar-brand__mark">DM</span>
+          <div>
+            <h2>Discrete Math</h2>
+            <p>Models of Computation</p>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="เมนูบทเรียน">
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Root</p>
+          <a href="index.html" class="nav-link" data-page="home">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 6h6a3 3 0 0 1 0 6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 12H7a3 3 0 0 0 0 6h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Learning Tree</strong>
+              <small>Study guide root</small>
+            </span>
+          </a>
+          <a href="introduction.html" class="nav-link" data-page="intro">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M12 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7 9.5l5-2.5 5 2.5-5 2.5-5-2.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Introduction</strong>
+              <small>Concept map</small>
+            </span>
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Finite-State Machines</p>
+          <a href="fsm-output.html" class="nav-link" data-page="fsm-output">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 11l6-3M9 13l6 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM with Output</strong>
+              <small>Live vending lab</small>
+            </span>
+          </a>
+          <a href="working-fsm.html" class="nav-link" data-page="working-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h9a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 4l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 16l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Working with FSM</strong>
+              <small>String simulator</small>
+            </span>
+          </a>
+          <a href="recognition-fsm.html" class="nav-link" data-page="recognition-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 12h4l2-5 4 10 2-5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M5 5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM Recognition</strong>
+              <small>Substring 111</small>
+            </span>
+          </a>
+          <a href="fsa.html" class="nav-link" data-page="fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="4.8" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="2.8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2.5 12h2.2M11 12h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSA</strong>
+              <small>Final-state decision</small>
+            </span>
+          </a>
+          <a href="language-recognition.html" class="nav-link" data-page="language-recognition">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 7h14M5 12h10M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M17 10l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Language Recognition</strong>
+              <small>L(M) membership</small>
+            </span>
+          </a>
+          <a href="designing-fsa.html" class="nav-link" data-page="designing-fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h14M5 12h14M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8 4v16M16 4v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Designing FSA</strong>
+              <small>Transition builder</small>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="page-designing-fsa" class="page-section active">
+        <header class="content-header designing-hero">
+          <span class="hero-kicker">Lesson 07</span>
+          <h1>Designing FSA</h1>
+          <p>ฝึกออกแบบ FSA จากโจทย์ 5 รูปแบบ ทั้ง prefix, substring, forbidden substring, suffix และการนับจำนวน <code>0</code> โดยเริ่มจาก state memory ก่อนทดสอบ machine ของตัวเอง</p>
+          <div class="designing-hero__actions" aria-label="ลิงก์เริ่มต้นบทเรียน">
+            <a class="lesson-action lesson-action--primary" href="#design-challenges">เริ่มออกแบบ FSA</a>
+            <a class="lesson-action lesson-action--secondary" href="#design-checklist">ดู Checklist</a>
+          </div>
+          <ol class="design-process-map" aria-label="ลำดับการออกแบบ FSA">
+            <li><span>01</span><strong>Choose</strong><small>เลือกโจทย์</small></li>
+            <li><span>02</span><strong>Remember</strong><small>กำหนด memory</small></li>
+            <li><span>03</span><strong>Build</strong><small>เติม machine</small></li>
+            <li><span>04</span><strong>Test</strong><small>รันทุกตัวอย่าง</small></li>
+            <li><span>05</span><strong>Debug</strong><small>ไล่ state path</small></li>
+          </ol>
+        </header>
+
+        <section class="design-challenge-picker" id="design-challenges" aria-labelledby="design-challenge-title">
+          <div>
+            <span class="lesson-label">Choose a challenge</span>
+            <h2 id="design-challenge-title">เลือกภาษาที่ต้องการออกแบบ</h2>
+            <p class="design-challenge-picker__note">การเปลี่ยนโจทย์จะล้าง machine และ hints ของโจทย์ปัจจุบัน</p>
+          </div>
+          <div class="design-challenge-chips" id="design-challenge-chips" role="group" aria-label="โจทย์ Designing FSA">
+            <button type="button" data-challenge="begin-00" aria-pressed="true"><span class="design-challenge-chip__number">1</span><span class="design-challenge-chip__label">Begin with <code>00</code><small>Prefix</small></span></button>
+            <button type="button" data-challenge="contain-00" aria-pressed="false"><span class="design-challenge-chip__number">2</span><span class="design-challenge-chip__label">Contain <code>00</code><small>Substring</small></span></button>
+            <button type="button" data-challenge="avoid-00" aria-pressed="false"><span class="design-challenge-chip__number">3</span><span class="design-challenge-chip__label">Do not contain <code>00</code><small>Forbidden</small></span></button>
+            <button type="button" data-challenge="end-00" aria-pressed="false"><span class="design-challenge-chip__number">4</span><span class="design-challenge-chip__label">End with <code>00</code><small>Suffix</small></span></button>
+            <button type="button" data-challenge="two-zeros" aria-pressed="false"><span class="design-challenge-chip__number">5</span><span class="design-challenge-chip__label">At least two <code>0</code>s<small>Counting</small></span></button>
+          </div>
+          <div class="design-challenge-rule" id="design-challenge-rule"></div>
+          <div class="design-challenge-examples" id="design-challenge-examples"></div>
+          <p class="designing-visually-hidden" id="design-challenge-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+        </section>
+
+        <div class="design-workspace-heading">
+          <span class="lesson-label">Design Workspace</span>
+          <h2 id="design-workspace-title">วางความคิด แล้วค่อยประกอบ machine</h2>
+          <p>ทำตามลำดับ Remember → Build → Test → Debug ได้ในพื้นที่เดียว</p>
+        </div>
+
+        <section class="builder-lab" aria-labelledby="design-workspace-title">
+          <div class="builder-panel builder-panel--control">
+            <div class="builder-panel__header">
+              <span class="lesson-label">Step 1 · Define State Memory</span>
+              <h2 id="builder-title">Language: begin with <code>00</code></h2>
+              <p>เลือกบทบาทของแต่ละ state ก่อนเติม table เพื่อให้ state แทน memory ที่จำเป็นจริง ๆ</p>
+            </div>
+
+            <div class="state-planner" id="state-planner-options"></div>
+            <p class="builder-message" id="state-planner-feedback" role="status" aria-live="polite" aria-atomic="true">เลือกบทบาท state เพื่อวาง memory ก่อน</p>
+            <p class="planner-note">ขั้นนี้ช่วยวางแนวคิด แต่ไม่บังคับก่อน Run Tests</p>
+            <a class="planner-next-link" href="#machine-builder">วาง memory เสร็จแล้ว → ไป Configure Machine</a>
+
+            <div class="hint-card">
+              <div>
+                <span class="lesson-label">Hint Ladder</span>
+                <h3>ขอ hint ทีละขั้น</h3>
+                <p class="hint-count" id="hint-count">Hints 0 / 3</p>
+              </div>
+              <button class="lesson-action lesson-action--secondary" id="hint-next" type="button">Show Hint 1</button>
+              <ol id="hint-list"></ol>
+              <p class="designing-visually-hidden" id="hint-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+            </div>
+          </div>
+
+          <div class="builder-panel builder-panel--builder" id="machine-builder" aria-labelledby="machine-builder-title">
+            <div class="builder-panel__header">
+              <span class="lesson-label">Step 2 · Configure Machine</span>
+              <h2 id="machine-builder-title">Build your FSA</h2>
+              <p>เลือก start state, final states และ transition ของ input <code>0</code>/<code>1</code> ให้ครบทุกช่อง</p>
+            </div>
+
+            <form class="builder-form" id="fsa-builder-form" novalidate>
+              <div class="builder-settings">
+                <div class="builder-setting-block">
+                  <span class="builder-substep-label">01 · Start state</span>
+                  <fieldset class="builder-start-states">
+                    <legend>Start state</legend>
+                  </fieldset>
+                </div>
+
+                <div class="builder-setting-block">
+                  <span class="builder-substep-label">02 · Final states</span>
+                  <fieldset class="builder-final-states">
+                    <legend>Final states</legend>
+                  </fieldset>
+                </div>
+              </div>
+
+              <span class="builder-substep-label">03 · Transition function</span>
+              <div class="simulation-table-wrap builder-table-wrap" tabindex="0" role="region" aria-label="Transition table เลื่อนได้ในแนวนอน">
+                <table class="builder-table">
+                  <caption class="designing-visually-hidden">Transition function ของ FSA ที่กำลังออกแบบ</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">State</th>
+                      <th scope="col">On input 0</th>
+                      <th scope="col">On input 1</th>
+                    </tr>
+                  </thead>
+                  <tbody id="builder-transition-body"></tbody>
+                </table>
+                <p class="table-mobile-hint">เลื่อนตารางในแนวนอนเพื่อกำหนด transition ทุกช่อง</p>
+              </div>
+
+              <p class="builder-status-summary" id="builder-status-summary">Start: s0 · Finals: 0 selected · Transitions: 0/8 complete</p>
+              <p class="builder-message" id="builder-message" role="status" aria-live="polite" aria-atomic="true"></p>
+
+              <span class="builder-substep-label">04 · Run Tests</span>
+              <div class="form-actions builder-actions">
+                <button class="lesson-action lesson-action--primary run-button" type="submit">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M8 5v14l11-7-11-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Run Tests</span>
+                </button>
+                <button class="lesson-action lesson-action--secondary reset-button" id="builder-reset" type="button" title="ล้าง state roles, final states, transitions, hints และผลทดสอบของโจทย์นี้">Reset Current Design</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="builder-results" id="builder-results" tabindex="-1" aria-labelledby="builder-results-title" aria-busy="false">
+          <div class="builder-panel builder-panel--results">
+            <div class="builder-panel__header">
+              <span class="lesson-label">Step 3 · Run Tests</span>
+              <h2 id="builder-results-title">Accepted / Rejected cases</h2>
+              <p>ระบบจะ run ทั้ง accepted tests และ rejected tests จาก machine ที่ผู้เรียนสร้าง</p>
+            </div>
+            <div class="builder-results-announcement designing-visually-hidden" id="builder-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+            <div class="builder-results-summary" aria-label="สรุปผลการทดสอบ">
+              <div><span>Tests complete</span><strong id="builder-tests-complete">—</strong></div>
+              <div><span>Passed</span><strong id="builder-passed-count">—</strong></div>
+              <div><span>Failed</span><strong id="builder-failed-count">—</strong></div>
+            </div>
+            <div class="builder-playback" id="builder-playback" hidden>
+              <div><span id="builder-playback-label">Testing cases</span><strong id="builder-playback-status"></strong></div>
+              <div class="builder-playback__track" role="progressbar" aria-label="ความคืบหน้าการทดสอบ" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0" aria-valuetext="ยังไม่เริ่ม"><i id="builder-playback-progress"></i></div>
+            </div>
+            <div class="simulation-table-wrap results-table-wrap" tabindex="0" role="region" aria-label="ผล test cases เลื่อนได้ในแนวนอน">
+              <table class="builder-table builder-test-table">
+                <caption class="designing-visually-hidden">ผล accepted และ rejected test cases ของ FSA ที่สร้าง</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">String</th>
+                    <th scope="col">Expected</th>
+                    <th scope="col">Your Machine</th>
+                    <th scope="col">Result</th>
+                  </tr>
+                </thead>
+                <tbody id="builder-test-body">
+                  <tr class="is-empty">
+                    <td colspan="4">ยังไม่ได้ run tests</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="table-mobile-hint">เลื่อนตารางในแนวนอนเพื่อดูผล test cases ทุกช่อง</p>
+            </div>
+          </div>
+
+          <div class="builder-panel builder-panel--path">
+            <div class="builder-panel__header">
+              <span class="lesson-label">Step 4 · Debug a Path</span>
+              <h2>Debug First Failing Case</h2>
+              <p id="builder-path-description">ถ้ามี test fail จะแสดง path ของ case แรกที่ควรแก้ก่อน</p>
+            </div>
+            <div class="builder-summary" id="builder-summary">
+              <strong>-</strong>
+              <p>ยังไม่มีผล test</p>
+            </div>
+            <div class="simulation-table-wrap path-table-wrap" tabindex="0" role="region" aria-label="State path table เลื่อนได้ในแนวนอน">
+              <table class="builder-table builder-path-table">
+                <caption class="designing-visually-hidden">State path ของ test case ที่กำลังตรวจ</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Step</th>
+                    <th scope="col">Current State</th>
+                    <th scope="col">Input</th>
+                    <th scope="col">Next State</th>
+                  </tr>
+                </thead>
+                <tbody id="builder-path-body">
+                  <tr class="is-empty">
+                    <td colspan="4">เลือก Run Tests เพื่อดู state path ของ case แรกที่ควรตรวจ</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="table-mobile-hint">เลื่อนตารางในแนวนอนเพื่อดู state path ทุกขั้น</p>
+            </div>
+          </div>
+        </section>
+
+        <article class="lesson-flow designing-reflection" id="design-checklist">
+          <section class="lesson-section lesson-section--split">
+            <div>
+              <span class="lesson-label">Checklist</span>
+              <h2>ก่อนบอกว่า FSA ถูกต้อง</h2>
+              <ul class="design-checklist-list">
+                <li>มี start state ชัดเจน</li>
+                <li>final states ตรง rule</li>
+                <li>transition ครบทุก state × input</li>
+                <li>ทดสอบ accepted/rejected และ <code>epsilon</code></li>
+              </ul>
+            </div>
+            <div class="builder-definition-card" aria-label="Design principle">
+              <code>state = limited memory</code>
+              <span>State ที่ดีจำเฉพาะข้อมูลจำเป็นจาก prefix ที่อ่านมาแล้ว ไม่ใช่จำ input ทั้งหมด</span>
+            </div>
+          </section>
+
+          <nav class="lesson-navigation" aria-label="Lesson navigation">
+            <div class="lesson-navigation__previous">
+              <span>Previous Lesson</span>
+              <a class="lesson-action lesson-action--secondary" href="language-recognition.html">← กลับไป Language Recognition</a>
+            </div>
+            <div class="lesson-navigation__next">
+              <span>Next Lesson</span>
+              <a class="lesson-action lesson-action--primary" href="content/08-final-challenge.md">ไป Final Challenge →</a>
+            </div>
+          </nav>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/sidebar.js?v=multi-page"></script>
+  <script src="scripts/fsaBuilder.js?v=five-fsa-challenges-1"></script>
+</body>
+
+</html>

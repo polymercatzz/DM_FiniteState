@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DM: Models of Computation Learning Tree</title>
+  <link rel="stylesheet" href="styles/base.css?v=layout-fill-2">
+  <link rel="stylesheet" href="styles/sidebar.css?v=sidebar-polish-1">
+  <link rel="stylesheet" href="styles/pages/home.css?v=layout-fill-2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+</head>
+<body data-page="home">
+  <div class="app-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="true" aria-label="ย่อ sidebar" title="ย่อ sidebar">
+      <svg class="sidebar-toggle__collapse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="sidebar-toggle__expand" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="sidebar-brand__mark">DM</span>
+          <div>
+            <h2>Discrete Math</h2>
+            <p>Models of Computation</p>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="เมนูบทเรียน">
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Root</p>
+          <a href="index.html" class="nav-link" data-page="home" title="Learning Tree">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 6h6a3 3 0 0 1 0 6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 12H7a3 3 0 0 0 0 6h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Learning Tree</strong>
+              <small>Study guide root</small>
+            </span>
+          </a>
+          <a href="introduction.html" class="nav-link" data-page="intro" title="Introduction">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M12 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7 9.5l5-2.5 5 2.5-5 2.5-5-2.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Introduction</strong>
+              <small>Concept map</small>
+            </span>
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Finite-State Machines</p>
+          <a href="fsm-output.html" class="nav-link" data-page="fsm-output" title="FSM with Output">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 11l6-3M9 13l6 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM with Output</strong>
+              <small>Live vending lab</small>
+            </span>
+          </a>
+          <a href="working-fsm.html" class="nav-link" data-page="working-fsm" title="Working with FSM">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h9a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 4l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 16l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Working with FSM</strong>
+              <small>Input/output strings</small>
+            </span>
+          </a>
+          <a href="recognition-fsm.html" class="nav-link" data-page="recognition-fsm" title="FSM Recognition">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 12h4l2-5 4 10 2-5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M5 5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM Recognition</strong>
+              <small>Substring 111</small>
+            </span>
+          </a>
+          <a href="fsa.html" class="nav-link" data-page="fsa" title="FSA">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="4.8" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="2.8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2.5 12h2.2M11 12h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSA</strong>
+              <small>Final-state decision</small>
+            </span>
+          </a>
+          <a href="language-recognition.html" class="nav-link" data-page="language-recognition" title="Language Recognition">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 7h14M5 12h10M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M17 10l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Language Recognition</strong>
+              <small>L(M) membership</small>
+            </span>
+          </a>
+          <a href="designing-fsa.html" class="nav-link" data-page="designing-fsa" title="Designing FSA">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h14M5 12h14M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8 4v16M16 4v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Designing FSA</strong>
+              <small>Transition builder</small>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="page-home" class="page-section active learning-root">
+        <header class="content-header root-hero">
+          <span class="hero-kicker">Learning Tree Root</span>
+          <h1>Models of Computation Study Guide</h1>
+          <p>เริ่มจากภาพรวมของแนวคิด แล้วค่อยไต่ลงไปสู่ Finite-State Machines แบบมี output ผ่าน simulator เพื่อเห็น state, input และ output ทำงานร่วมกันแบบเป็นขั้นตอน</p>
+          <ul class="hero-meta" aria-label="ข้อมูลสรุปหลักสูตร">
+            <li><strong>7</strong> Lessons</li>
+            <li><strong>3</strong> Learning Phases</li>
+            <li class="hero-meta__route">Concept <span aria-hidden="true">→</span> Simulator <span aria-hidden="true">→</span> Builder</li>
+          </ul>
+        </header>
+
+        <div class="learning-tree" aria-label="แผนผังนำทางการเรียน">
+          <article class="tree-node tree-node--root">
+            <span class="tree-node__eyebrow">Root</span>
+            <h2>Discrete Math: Models of Computation</h2>
+            <p>ใช้หน้านี้เป็นแผนที่รวมก่อนเข้าแต่ละบท เลือกเส้นทางจากพื้นฐานไปสู่การทดลองจริง</p>
+            <div class="course-roadmap" aria-label="Course Roadmap">
+              <span class="course-roadmap__label">Course Roadmap</span>
+              <div class="course-roadmap__phases">
+                <strong>Foundation</strong>
+                <span aria-hidden="true">→</span>
+                <strong>FSM with Output</strong>
+                <span aria-hidden="true">→</span>
+                <strong>FSA &amp; Design</strong>
+              </div>
+            </div>
+          </article>
+
+          <div class="tree-branches">
+            <section class="learning-phase learning-phase--foundation" aria-labelledby="phase-foundation-title">
+              <header class="learning-phase__header">
+                <span>Phase 01</span>
+                <h2 id="phase-foundation-title">Foundation</h2>
+                <p>ปูแนวคิดพื้นฐานก่อนเริ่มทดลอง</p>
+              </header>
+              <ol class="learning-phase__lessons">
+                <li>
+                  <a class="tree-node tree-node--lesson" href="introduction.html">
+                    <span class="tree-node__index">01</span>
+                    <div class="tree-node__body">
+                      <span class="tree-node__eyebrow">Start Here</span>
+                      <h3>Introduction</h3>
+                      <p>ปูพื้นฐานว่า model, state, input และภาษาเชิงรูปแบบเกี่ยวข้องกันอย่างไร</p>
+                      <span class="tree-node__cta">เปิดบทเรียน <span aria-hidden="true">→</span></span>
+                    </div>
+                  </a>
+                </li>
+              </ol>
+            </section>
+
+            <section class="learning-phase learning-phase--fsm" aria-labelledby="phase-fsm-title">
+              <header class="learning-phase__header">
+                <span>Phase 02</span>
+                <h2 id="phase-fsm-title">FSM with Output</h2>
+                <p>เรียนรู้ state และ output ผ่าน simulator แบบเป็นขั้นตอน</p>
+              </header>
+              <ol class="learning-phase__lessons" start="2">
+                <li>
+                  <a class="tree-node tree-node--lesson" href="fsm-output.html">
+                    <span class="tree-node__index">02</span>
+                    <div class="tree-node__body">
+                      <span class="tree-node__eyebrow">Interactive Lab</span>
+                      <h3>FSM with Output</h3>
+                      <p>ทดลองตู้ขายขนมจำลองเพื่อดู transition และ output ในแต่ละสถานะ</p>
+                      <span class="tree-node__cta">เปิดบทเรียน <span aria-hidden="true">→</span></span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="tree-node tree-node--lesson" href="working-fsm.html">
+                    <span class="tree-node__index">03</span>
+                    <div class="tree-node__body">
+                      <span class="tree-node__eyebrow">String Simulator</span>
+                      <h3>Working with FSM</h3>
+                      <p>ป้อน input string เดา output string แล้วตรวจ state path ทีละ step</p>
+                      <span class="tree-node__cta">เปิดบทเรียน <span aria-hidden="true">→</span></span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="tree-node tree-node--lesson" href="recognition-fsm.html">
+                    <span class="tree-node__index">04</span>
+                    <div class="tree-node__body">
+                      <span class="tree-node__eyebrow">Recognition Lab</span>
+                      <h3>FSM Recognition</h3>
+                      <p>ตรวจ substring 111 ผ่าน output stream และ last output bit</p>
+                      <span class="tree-node__cta">เปิดบทเรียน <span aria-hidden="true">→</span></span>
+                    </div>
+                  </a>
+                </li>
+              </ol>
+            </section>
+
+            <section class="learning-phase learning-phase--fsa" aria-labelledby="phase-fsa-title">
+              <header class="learning-phase__header">
+                <span>Phase 03</span>
+                <h2 id="phase-fsa-title">FSA &amp; Design</h2>
+                <p>ตัดสินภาษาและออกแบบเครื่องจักรสถานะด้วยตัวเอง</p>
+              </header>
+              <ol class="learning-phase__lessons" start="5">
+                <li>
+                  <a class="tree-node tree-node--lesson" href="fsa.html">
+                    <span class="tree-node__index">05</span>
+                    <div class="tree-node__body">
+                      <span class="tree-node__eyebrow">Final-State Lab</span>
+                      <h3>FSM with No Output / FSA</h3>
+                      <p>ไม่มี output ระหว่างทาง ตัดสินจาก end state ว่าอยู่ใน F หรือไม่</p>
+                      <span class="tree-node__cta">เปิดบทเรียน <span aria-hidden="true">→</span></span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="tree-node tree-node--lesson" href="language-recognition.html">
+                    <span class="tree-node__index">06</span>
+                    <div class="tree-node__body">
+                      <span class="tree-node__eyebrow">Membership Lab</span>
+                      <h3>Language Recognition</h3>
+                      <p>เลือก machine แล้วทดสอบว่า string x อยู่ใน L(M) หรือไม่</p>
+                      <span class="tree-node__cta">เปิดบทเรียน <span aria-hidden="true">→</span></span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="tree-node tree-node--lesson" href="designing-fsa.html">
+                    <span class="tree-node__index">07</span>
+                    <div class="tree-node__body">
+                      <span class="tree-node__eyebrow">Builder Lab</span>
+                      <h3>Designing FSA</h3>
+                      <p>วาง state memory เติม transition table แล้ว run tests กับ FSA ของตัวเอง</p>
+                      <span class="tree-node__cta">เปิดบทเรียน <span aria-hidden="true">→</span></span>
+                    </div>
+                  </a>
+                </li>
+              </ol>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/sidebar.js?v=multi-page"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

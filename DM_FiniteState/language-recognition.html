@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DM: Language Recognition</title>
+  <link rel="stylesheet" href="styles/base.css?v=layout-fill-2">
+  <link rel="stylesheet" href="styles/sidebar.css?v=sidebar-polish-1">
+  <link rel="stylesheet" href="styles/challenge-sections.css?v=language-ux-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body data-page="language-recognition">
+  <div class="app-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="true" aria-label="ย่อ sidebar" title="ย่อ sidebar">
+      <svg class="sidebar-toggle__collapse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="sidebar-toggle__expand" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="sidebar-brand__mark">DM</span>
+          <div>
+            <h2>Discrete Math</h2>
+            <p>Models of Computation</p>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="เมนูบทเรียน">
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Root</p>
+          <a href="index.html" class="nav-link" data-page="home">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 6h6a3 3 0 0 1 0 6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 12H7a3 3 0 0 0 0 6h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Learning Tree</strong>
+              <small>Study guide root</small>
+            </span>
+          </a>
+          <a href="introduction.html" class="nav-link" data-page="intro">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M12 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7 9.5l5-2.5 5 2.5-5 2.5-5-2.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Introduction</strong>
+              <small>Concept map</small>
+            </span>
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Finite-State Machines</p>
+          <a href="fsm-output.html" class="nav-link" data-page="fsm-output">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 11l6-3M9 13l6 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM with Output</strong>
+              <small>Live vending lab</small>
+            </span>
+          </a>
+          <a href="working-fsm.html" class="nav-link" data-page="working-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h9a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 4l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 16l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Working with FSM</strong>
+              <small>String simulator</small>
+            </span>
+          </a>
+          <a href="recognition-fsm.html" class="nav-link" data-page="recognition-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 12h4l2-5 4 10 2-5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M5 5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM Recognition</strong>
+              <small>Substring 111</small>
+            </span>
+          </a>
+          <a href="fsa.html" class="nav-link" data-page="fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="4.8" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="2.8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2.5 12h2.2M11 12h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSA</strong>
+              <small>Final-state decision</small>
+            </span>
+          </a>
+          <a href="language-recognition.html" class="nav-link" data-page="language-recognition">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 7h14M5 12h10M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M17 10l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Language Recognition</strong>
+              <small>L(M) membership</small>
+            </span>
+          </a>
+          <a href="designing-fsa.html" class="nav-link" data-page="designing-fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h14M5 12h14M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8 4v16M16 4v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Designing FSA</strong>
+              <small>Transition builder</small>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="page-language-recognition" class="page-section active">
+        <header class="content-header language-hero">
+          <span class="hero-kicker">Lesson 06</span>
+          <h1>Language Recognition</h1>
+          <p>จากการตรวจ string ทีละตัว เราจะขยับมามองว่าเครื่อง <code>M</code> ยอมรับ strings ใดบ้าง และ strings เหล่านั้นรวมกันเป็น language ของเครื่องได้อย่างไร</p>
+          <div class="language-hero__actions" aria-label="ทางลัดบทเรียน">
+            <a class="lesson-action lesson-action--primary" href="#language-lab">ทดสอบ x ∈ L(M)</a>
+            <a class="lesson-action lesson-action--secondary" href="#language-definition">ทบทวนนิยาม L(M)</a>
+          </div>
+          <div class="membership-pipeline" aria-label="ลำดับการตรวจ membership">
+            <span>String x</span><i aria-hidden="true">→</i>
+            <span>Read every symbol</span><i aria-hidden="true">→</i>
+            <span>End state</span><i aria-hidden="true">→</i>
+            <span>Compare with F</span><i aria-hidden="true">→</i>
+            <span>Membership result</span>
+          </div>
+        </header>
+
+        <article class="recognition-definition" id="language-definition" aria-labelledby="recognition-definition-title">
+          <div class="recognition-definition__intro">
+            <span class="lesson-label">นิยามสำคัญมาก</span>
+            <h2 id="recognition-definition-title">เมื่อไร string จึงถูก recognized หรือ accepted?</h2>
+            <p>
+              ให้ <code>x</code> เป็น input string เมื่อเครื่องอ่าน <code>x</code> จนครบแล้ว
+              ถ้า <code>x</code> พาเครื่องจาก start state <code>s<sub>0</sub></code>
+              ไปยัง state ที่อยู่ในเซตของ final states <code>F</code>
+              เราจะกล่าวว่า <strong>string <code>x</code> ถูก recognized หรือ accepted</strong>
+            </p>
+          </div>
+
+          <div class="recognition-definition__formula" aria-label="เงื่อนไขการยอมรับ string x">
+            <span>เขียนเป็นสัญลักษณ์ได้ว่า</span>
+            <strong>f(s<sub>0</sub>, x) &isin; F</strong>
+            <p><code>f(s<sub>0</sub>, x)</code> คือ state ที่เครื่องไปถึงหลังเริ่มจาก <code>s<sub>0</sub></code> และอ่าน <code>x</code> จนครบ</p>
+          </div>
+
+          <ol class="recognition-definition__steps" aria-label="ลำดับการพิจารณา accepted string">
+            <li>
+              <span>1</span>
+              <p>เริ่มที่ <code>s<sub>0</sub></code></p>
+            </li>
+            <li>
+              <span>2</span>
+              <p>อ่าน <code>x</code> จนครบทุก symbol</p>
+            </li>
+            <li>
+              <span>3</span>
+              <p>ตรวจว่า state สุดท้ายอยู่ใน <code>F</code> หรือไม่</p>
+            </li>
+          </ol>
+
+          <blockquote>
+            การตัดสิน accepted หรือ rejected ดูจาก state หลังอ่าน input จบ ไม่ได้ตัดสินจาก state ที่ผ่านระหว่างทาง
+          </blockquote>
+
+          <section class="language-set-definition" aria-labelledby="language-set-title">
+            <div>
+              <span class="lesson-label">Language ของเครื่อง</span>
+              <h2 id="language-set-title"><code>L(M)</code> หมายถึงอะไร?</h2>
+              <p><code>L(M)</code> อ่านว่า <em>language recognized by machine M</em> หมายถึง <strong>เซตของ strings ทุกตัวที่เครื่อง <code>M</code> ยอมรับ</strong></p>
+            </div>
+            <div class="language-set-definition__formula">
+              <strong>L(M) = { x | f(s<sub>0</sub>, x) &isin; F }</strong>
+              <span>ดังนั้น <code>x &isin; L(M)</code> ก็ต่อเมื่อเครื่อง <code>M</code> accepted string <code>x</code></span>
+            </div>
+          </section>
+        </article>
+
+        <section class="language-lab" id="language-lab" aria-labelledby="language-lab-title">
+          <div class="language-panel language-panel--control">
+            <div class="language-panel__header">
+              <div class="language-panel__heading-row">
+                <div>
+                  <span class="lesson-label">Membership Tester</span>
+                  <h2 id="language-lab-title">Test whether x is in L(M)</h2>
+                </div>
+                <button class="language-how-to-trigger" id="open-language-how-to" type="button" aria-haspopup="dialog" aria-controls="language-how-to-dialog">
+                  <span aria-hidden="true">!</span>
+                  วิธีเล่น
+                </button>
+              </div>
+              <p>เลือก machine แล้วกด chip เพื่อสร้าง string จากนั้นกด <strong>Test</strong> เพื่อดูการทำงานทีละ step</p>
+              <ol class="language-workflow" aria-label="ขั้นตอนการตรวจ membership">
+                <li><span>01</span><strong>Choose M</strong><small>เลือก machine / language</small></li>
+                <li><span>02</span><strong>Build x</strong><small>ต่อ 0, 1 หรือ epsilon</small></li>
+                <li><span>03</span><strong>Test</strong><small>อ่านทุก symbol</small></li>
+                <li><span>04</span><strong>Decide</strong><small>เทียบ end state กับ F</small></li>
+              </ol>
+            </div>
+
+            <form class="language-form" id="language-form" novalidate>
+              <div class="language-step-label">01 Choose Machine</div>
+              <label class="field-group" for="machine-select">
+                <span>Machine / Language</span>
+                <select id="machine-select">
+                  <option value="ones">{1}*</option>
+                  <option value="finite">{1, 01}</option>
+                  <option value="zero-or-10">{0}* U {0}*{10}{0,1}*</option>
+                </select>
+              </label>
+
+              <div class="language-step-label">02 Build String x</div>
+              <label class="field-group" for="language-input">
+                <span>String x</span>
+                <input id="language-input" type="text" value="epsilon" readonly aria-describedby="language-input-hint epsilon-note language-error">
+              </label>
+              <p class="language-input-hint" id="language-input-hint">สร้าง string ด้วยปุ่มด้านล่าง ช่องนี้ใช้แสดงผลและพิมพ์ไม่ได้</p>
+
+              <div class="string-chip-builder" aria-label="ปุ่มสำหรับสร้าง String x">
+                <div class="string-chip-builder__group" role="group" aria-label="Symbol actions">
+                  <span class="string-chip-builder__label">Symbols · ต่อ x</span>
+                  <div class="string-chip-builder__buttons">
+                    <button class="string-chip" type="button" data-string-action="append" data-symbol="0">0</button>
+                    <button class="string-chip" type="button" data-string-action="append" data-symbol="1">1</button>
+                    <button class="string-chip string-chip--utility" type="button" data-string-action="epsilon">&epsilon; epsilon</button>
+                  </div>
+                </div>
+                <div class="string-chip-builder__group string-chip-builder__group--editing" role="group" aria-label="Editing actions">
+                  <span class="string-chip-builder__label">Edit · แก้ไข x</span>
+                  <div class="string-chip-builder__buttons">
+                    <button class="string-chip string-chip--utility string-chip--remove" type="button" data-string-action="remove" aria-label="ลบ symbol ตัวสุดท้าย">&larr; ลบ</button>
+                    <button class="string-chip string-chip--utility" type="button" data-string-action="clear">ล้าง</button>
+                  </div>
+                </div>
+              </div>
+
+              <p class="epsilon-note" id="epsilon-note"><code>epsilon</code> หมายถึง string ว่าง หรือ input ที่ไม่มี symbol เลย</p>
+              <div class="language-step-label">03 Test Membership</div>
+              <p class="form-message" id="language-error" role="status" aria-live="polite" aria-atomic="true"></p>
+
+              <div class="form-actions">
+                <button class="lesson-action lesson-action--primary run-button" type="submit">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M8 5v14l11-7-11-7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Test</span>
+                </button>
+                <button class="lesson-action lesson-action--secondary reset-button" id="language-reset" type="button">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 12a8 8 0 1 1-2.34-5.66" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 4v6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Reset</span>
+                </button>
+              </div>
+            </form>
+
+          </div>
+
+          <div class="language-panel language-panel--simulation" id="language-results" tabindex="-1" aria-labelledby="language-results-title">
+            <div class="visually-hidden" id="language-announcement" role="status" aria-live="polite" aria-atomic="true"></div>
+            <header class="language-simulation-heading">
+              <div>
+                <span class="lesson-label">Membership Trace</span>
+                <h2 id="language-results-title">From String to Language</h2>
+                <p>ติดตาม state path แล้วตรวจว่า end state อยู่ใน <code>F</code> หรือไม่</p>
+              </div>
+            </header>
+
+            <div class="machine-summary" id="machine-summary"></div>
+
+            <div class="language-membership-pipeline" aria-label="ผล membership ของ string">
+              <div class="language-membership-step" id="language-pipeline-input"><span>String x</span><strong>epsilon</strong></div>
+              <i aria-hidden="true">→</i>
+              <div class="language-membership-step" id="language-pipeline-end"><span>End state</span><strong>q0</strong></div>
+              <i aria-hidden="true">→</i>
+              <div class="language-membership-step" id="language-pipeline-final"><span>Compare with F</span><strong>กำลังตรวจ</strong></div>
+              <i aria-hidden="true">→</i>
+              <div class="language-membership-step language-membership-step--result" id="language-pipeline-membership"><span>Membership</span><strong>รอการ Test</strong></div>
+            </div>
+
+            <div class="language-playback" id="language-playback" hidden>
+              <div>
+                <span id="language-playback-label">Auto trace</span>
+                <strong id="language-playback-status"></strong>
+              </div>
+              <div class="language-playback__track" role="progressbar" aria-label="ความคืบหน้าการอ่าน string" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" aria-valuetext="ยังไม่เริ่ม">
+                <i id="language-playback-progress"></i>
+              </div>
+            </div>
+
+            <dl class="language-status-strip">
+              <div>
+                <span>State path</span>
+                <div id="language-state-path" aria-label="State path">-</div>
+              </div>
+              <div>
+                <span>Current / End state</span>
+                <strong id="language-end-state">-</strong>
+              </div>
+              <div>
+                <span>Final states</span>
+                <strong id="language-final-states">-</strong>
+              </div>
+              <div>
+                <span>String x</span>
+                <strong id="language-string">epsilon</strong>
+              </div>
+            </dl>
+
+            <div class="simulation-table-wrap" tabindex="0" role="region" aria-label="ผล transition เลื่อนได้ในแนวนอน">
+              <p class="simulation-table__mobile-hint">เลื่อนตารางในแนวนอนเพื่อดูทุกคอลัมน์</p>
+              <table class="language-table">
+                <caption class="visually-hidden">ตาราง transition ของการทดสอบว่า x อยู่ใน L(M) หรือไม่</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Step</th>
+                    <th scope="col">Current State</th>
+                    <th scope="col">Input</th>
+                    <th scope="col">Next State</th>
+                  </tr>
+                </thead>
+                <tbody id="language-body">
+                  <tr class="is-empty">
+                    <td colspan="4">Step 0 · กด Test เพื่อเริ่มดู transition ทีละ step</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <dialog class="language-how-to" id="language-how-to-dialog" aria-labelledby="language-how-to-title">
+          <div class="language-how-to__header">
+          <div>
+            <span>QUICK START</span>
+            <h2 id="language-how-to-title">วิธีเล่น Membership Tester</h2>
+          </div>
+          <button class="language-how-to__close" id="close-language-how-to" type="button" aria-label="ปิดวิธีเล่น" title="ปิด">×</button>
+        </div>
+        <p class="language-how-to__duration">ใช้เวลาประมาณ 1 นาที</p>
+          <ol class="language-how-to__steps">
+            <li><span>1</span><p>เลือก <strong>Machine / Language</strong> ที่ต้องการทดสอบจากรายการ</p></li>
+            <li><span>2</span><p>สร้าง <strong>String x</strong> โดยกด chip <strong>0</strong> และ <strong>1</strong> หรือเลือก <strong>epsilon</strong> สำหรับ string ว่าง</p></li>
+            <li><span>3</span><p>กด <strong>Test</strong> ระบบจะเลื่อนไปยัง simulation และแสดง transition ทีละ step โดยอัตโนมัติ</p></li>
+            <li><span>4</span><p>อ่านคำตอบสั้น ๆ ที่ <strong>Run result</strong> เพื่อดูว่า string อยู่ใน <code>L(M)</code> หรือไม่</p></li>
+          </ol>
+          <div class="language-how-to__legend">
+            <span><strong>&epsilon;</strong> string ว่าง</span>
+            <span><strong>&isin; L(M)</strong> accepted</span>
+            <span><strong>&notin; L(M)</strong> rejected</span>
+          </div>
+        </dialog>
+
+        <section class="guess-language-activity" aria-labelledby="guess-title">
+          <div>
+            <span class="lesson-label">Activity</span>
+            <h2 id="guess-title">Guess the Language</h2>
+            <p>ดู accepted/rejected examples แล้วเลือก rule ที่ตรงที่สุด</p>
+          </div>
+          <div class="guess-grid" id="guess-grid"></div>
+        </section>
+
+        <article class="lesson-flow language-reflection" id="language-key-idea">
+          <section class="lesson-section lesson-section--split">
+            <div>
+              <span class="lesson-label">Key Idea</span>
+              <h2><code>L(M)</code> คือทั้งภาษา ไม่ใช่ string เดี่ยว</h2>
+              <p>เมื่อเราเขียน <code>x ∈ L(M)</code> หมายถึง string <code>x</code> เป็นหนึ่งใน strings ที่ machine <code>M</code> accepted ถ้า machine สองตัว accepted string ชุดเดียวกันทั้งหมด ก็ถือว่า recognize language เดียวกัน</p>
+            </div>
+            <div class="language-definition-card" aria-label="Language definition">
+              <code>L(M) = { x | M accepts x }</code>
+              <span><strong>epsilon</strong> คือ string ว่าง ความยาว 0</span>
+              <dl class="language-reflection__comparison">
+                <div><dt><code>x</code></dt><dd>สมาชิกหนึ่งตัวที่กำลังทดสอบ</dd></div>
+                <div><dt><code>L(M)</code></dt><dd>เซตของสมาชิกทุกตัวที่ M accepts</dd></div>
+              </dl>
+            </div>
+          </section>
+
+          <nav class="lesson-navigation" aria-label="Lesson navigation">
+            <div class="lesson-navigation__previous">
+              <span>Previous Lesson</span>
+              <a class="lesson-action lesson-action--secondary" href="fsa.html">← กลับไป FSA</a>
+            </div>
+            <div class="lesson-navigation__next">
+              <span>Next Lesson</span>
+              <a class="lesson-action lesson-action--primary" href="designing-fsa.html">เรียน Designing FSA →</a>
+            </div>
+          </nav>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/sidebar.js?v=multi-page"></script>
+  <script src="scripts/languageChallenge.js?v=language-how-to-1"></script>
+</body>
+
+</html>
+
+

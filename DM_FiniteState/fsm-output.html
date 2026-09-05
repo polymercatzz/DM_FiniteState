@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DM: FSM with Output</title>
+  <link rel="stylesheet" href="styles/base.css?v=layout-fill-2">
+  <link rel="stylesheet" href="styles/sidebar.css?v=sidebar-polish-1">
+  <link rel="stylesheet" href="styles/pages/fsm-output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+</head>
+<body data-page="fsm-output">
+  <div class="app-container">
+    <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-controls="site-sidebar" aria-expanded="true" aria-label="ย่อ sidebar" title="ย่อ sidebar">
+      <svg class="sidebar-toggle__collapse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="sidebar-toggle__expand" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <aside class="sidebar" id="site-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <span class="sidebar-brand__mark">DM</span>
+          <div>
+            <h2>Discrete Math</h2>
+            <p>Models of Computation</p>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="เมนูบทเรียน">
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Root</p>
+          <a href="index.html" class="nav-link" data-page="home">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M12 6h6a3 3 0 0 1 0 6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 12H7a3 3 0 0 0 0 6h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Learning Tree</strong>
+              <small>Study guide root</small>
+            </span>
+          </a>
+          <a href="introduction.html" class="nav-link" data-page="intro">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M12 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7 9.5l5-2.5 5 2.5-5 2.5-5-2.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Introduction</strong>
+              <small>Concept map</small>
+            </span>
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <p class="sidebar-section-title">Finite-State Machines</p>
+          <a href="fsm-output.html" class="nav-link" data-page="fsm-output">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="7" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17" cy="17" r="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 11l6-3M9 13l6 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM with Output</strong>
+              <small>Live vending lab</small>
+            </span>
+          </a>
+          <a href="working-fsm.html" class="nav-link" data-page="working-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h9a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 4l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 16l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Working with FSM</strong>
+              <small>Input/output strings</small>
+            </span>
+          </a>
+          <a href="recognition-fsm.html" class="nav-link" data-page="recognition-fsm">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 12h4l2-5 4 10 2-5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M5 5h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSM Recognition</strong>
+              <small>Substring 111</small>
+            </span>
+          </a>
+          <a href="fsa.html" class="nav-link" data-page="fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="4.8" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="12" r="2.8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2.5 12h2.2M11 12h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>FSA</strong>
+              <small>Final-state decision</small>
+            </span>
+          </a>
+          <a href="language-recognition.html" class="nav-link" data-page="language-recognition">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 7h14M5 12h10M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M17 10l2 2-2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Language Recognition</strong>
+              <small>L(M) membership</small>
+            </span>
+          </a>
+          <a href="designing-fsa.html" class="nav-link" data-page="designing-fsa">
+            <span class="nav-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 6h14M5 12h14M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8 4v16M16 4v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-link__text">
+              <strong>Designing FSA</strong>
+              <small>Transition builder</small>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section id="page-fsm-output" class="page-section active">
+        <header class="content-header fsm-hero">
+          <div class="fsm-hero__copy">
+            <span class="hero-kicker">Lesson 02</span>
+            <h1>Finite-State Machines with Output</h1>
+            <p>เรียนรู้ state, input และ output ผ่านตู้ขายขนมจำลอง อ่านนิยามให้เห็นภาพ แล้วทดลองกด input เพื่อสังเกต transition ทีละขั้น</p>
+            <div class="fsm-hero__actions" aria-label="ทางลัดในบทเรียน">
+              <a class="hero-action hero-action--primary" href="#vending-lab">เริ่มทดลองกับตู้ขายขนม</a>
+              <a class="hero-action hero-action--secondary" href="#fsm-definition">อ่านพื้นฐานก่อน</a>
+            </div>
+          </div>
+        </header>
+
+        <article class="lesson-flow fsm-lesson">
+          <section class="lesson-section" id="fsm-definition">
+            <span class="lesson-label">Definition</span>
+            <h2>FSM คืออะไร</h2>
+            <p>Finite-State Machine หรือ FSM คือแบบจำลองของระบบที่มีจำนวน state จำกัด ระบบเริ่มจาก start state แล้วรับ input ทีละตัว ทุกครั้งที่รับ input ระบบจะเปลี่ยน state และอาจสร้าง output ออกมา</p>
+            <div class="formula-strip" aria-label="FSM with output notation">
+              <code>M = (S, I, O, f, g, s0)</code>
+            </div>
+          </section>
+
+          <section class="lesson-section">
+            <span class="lesson-label">Components</span>
+            <h2>Components of FSM</h2>
+            <dl class="component-grid">
+              <div><dt>States</dt><dd>สถานะทั้งหมดที่เครื่องเป็นไปได้</dd></div>
+              <div><dt>Input alphabet</dt><dd>ชุด input ที่เครื่องรับได้</dd></div>
+              <div><dt>Output alphabet</dt><dd>ชุด output ที่เครื่องสร้างได้</dd></div>
+              <div><dt>Transition function</dt><dd>กฎที่บอกว่า state ถัดไปคืออะไร</dd></div>
+              <div><dt>Output function</dt><dd>กฎที่บอกว่า output คืออะไร</dd></div>
+              <div><dt>Start state</dt><dd>state เริ่มต้นของเครื่อง</dd></div>
+            </dl>
+          </section>
+
+          <section class="lesson-section lesson-section--split">
+            <div>
+              <span class="lesson-label">Vending Machine Model</span>
+              <h2>ตู้ขายสินค้าเป็น FSM ได้อย่างไร</h2>
+              <p>ในตัวอย่างนี้ state แทนยอดเงินสะสมในตู้ ส่วน input คือเหรียญหรือปุ่มเลือกสินค้า เมื่อยอดครบ 20 บาท เครื่องเข้าสู่ state พร้อมเลือกสินค้า และ output จะเกิดเมื่อมีการทอนเงินหรือจ่ายสินค้า</p>
+            </div>
+            <div class="state-stack-wrap">
+              <p class="state-stack__label">ยอดเงินสะสมที่แต่ละ state จดจำ</p>
+              <ol class="state-stack" aria-label="State meaning">
+                <li><strong>s0</strong><span>0 บาท</span></li>
+                <li><strong>s1</strong><span>5 บาท</span></li>
+                <li><strong>s2</strong><span>10 บาท</span></li>
+                <li><strong>s3</strong><span>15 บาท</span></li>
+                <li><strong>s4</strong><span>20 บาท พร้อมเลือกสินค้า</span></li>
+              </ol>
+            </div>
+          </section>
+        </article>
+
+        <div class="interactive-grid" id="vending-lab">
+          <div class="card simulator-card">
+            <div class="card-header-row">
+              <h3>Vending Machine Simulator</h3>
+              <button class="tips-trigger" id="open-tips" type="button" aria-label="เปิดวิธีเล่น SNACK STATION" title="วิธีเล่น">
+                <span aria-hidden="true">i</span>
+                <span>วิธีเล่น</span>
+              </button>
+            </div>
+            <p class="desc">สินค้าราคา 20 บาท รับเหรียญ 5 และ 10 บาท หากยอดเกิน 20 บาท ระบบจะทอนส่วนเกินทันที</p>
+            <ol class="lab-sequence" aria-label="ลำดับการทดลอง">
+              <li><strong>01</strong><span>เลือก Input</span></li>
+              <li><strong>02</strong><span>ดู State Transition</span></li>
+              <li><strong>03</strong><span>ตรวจ Output</span></li>
+            </ol>
+
+            <div class="simulator-layout">
+            <div class="machine-display" aria-label="ตู้ขายขนมจำลอง">
+              <div class="vending-machine">
+                <div class="machine-crown">
+                  <div class="machine-brand">
+                    <span class="machine-brand__mark">DM</span>
+                    <span>SNACK STATION</span>
+                  </div>
+                  <span class="machine-status-light" aria-hidden="true"></span>
+                  <button class="btn reset-btn icon-btn" id="btn-reset" aria-label="เริ่มใหม่" title="เริ่มใหม่">
+                    <span class="icon-btn__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M20 12a8 8 0 1 1-2.34-5.66" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 4v6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="machine-console">
+                  <div class="monitor">
+                    <span class="monitor__prompt" id="machine-prompt">INSERT COIN</span>
+                    <strong class="monitor__balance"><span id="balance-display">0</span> THB</strong>
+                    <span class="value" id="state-display">s0 (มีเงิน 0 บาท)</span>
+                  </div>
+                  <div class="coin-receiver">
+                    <span class="coin-receiver__label">COIN</span>
+                    <span class="coin-slot" id="coin-slot" aria-hidden="true"></span>
+                    <span class="coin-return" aria-hidden="true"></span>
+                  </div>
+                </div>
+
+                <div class="machine-cabinet">
+                  <div class="product-window">
+                    <div class="product-grid">
+                      <article class="product product-orange" data-product="O">
+                        <div class="snack-bag snack-bag--orange" aria-hidden="true">
+                          <span>CORNAE</span>
+                          <i></i><i></i><i></i>
+                        </div>
+                        <div class="product-meta">
+                          <span class="product-code">O</span>
+                          <span>คอร์เน่</span>
+                          <strong>20 ฿</strong>
+                        </div>
+                        <button class="action-btn product-select product-select--orange" data-input="O" aria-label="เลือกคอร์เน่" aria-describedby="product-help">
+                          <span>O</span>
+                        </button>
+                      </article>
+                      <article class="product product-red" data-product="R">
+                        <div class="snack-bag snack-bag--red" aria-hidden="true">
+                          <span>PARTY</span>
+                          <i></i><i></i><i></i>
+                        </div>
+                        <div class="product-meta">
+                          <span class="product-code">R</span>
+                          <span>ปาร์ตี้</span>
+                          <strong>20 ฿</strong>
+                        </div>
+                        <button class="action-btn product-select product-select--red" data-input="R" aria-label="เลือกปาร์ตี้" aria-describedby="product-help">
+                          <span>R</span>
+                        </button>
+                      </article>
+                    </div>
+                    <p class="product-help" id="product-help">กดเลือกได้ทุกเวลา หากเงินยังไม่ครบเครื่องจะแนะนำให้หยอดเหรียญ</p>
+                    <div class="machine-shelf" aria-hidden="true"></div>
+                  </div>
+                </div>
+
+                <div class="coin-controls" aria-label="เหรียญสำหรับทดลอง">
+                  <span class="control-label">เลือกเหรียญเพื่อหยอด</span>
+                  <div class="coin-controls__buttons">
+                    <button class="coin-btn coin-btn-5" data-input="5" aria-label="หยอดเหรียญ 5 บาท">
+                      <span class="coin-face">5</span>
+                      <span>5 บาท</span>
+                    </button>
+                    <button class="coin-btn coin-btn-10" data-input="10" aria-label="หยอดเหรียญ 10 บาท">
+                      <span class="coin-face">10</span>
+                      <span>10 บาท</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="dispense-section">
+                  <div class="dispense-door" id="dispense-door">
+                    <span class="dispense-flap">PUSH</span>
+                    <div class="dispensed-product" id="dispensed-product" aria-hidden="true"></div>
+                  </div>
+                  <div class="output-box">
+                    <span class="label">OUTPUT</span>
+                    <span class="value highlight" id="output-display">ไม่มีอะไรออกมา</span>
+                  </div>
+                </div>
+                <div class="machine-feet" aria-hidden="true"><span></span><span></span></div>
+              </div>
+            </div>
+
+            <section class="live-transition">
+              <div class="live-transition__header">
+                <span class="live-transition__eyebrow">Observe</span>
+                <h4>State Transition</h4>
+                <p>กดเหรียญหรือปุ่มสินค้าเพื่อดูการเปลี่ยน state</p>
+              </div>
+              <div class="transition-notation" aria-label="State transition notation">
+                <strong id="transition-from">S0</strong>
+                <span class="transition-notation__line" aria-hidden="true"></span>
+                <code id="transition-rule">— / —</code>
+                <span class="transition-notation__arrow" aria-hidden="true">→</span>
+                <strong id="transition-to">S0</strong>
+              </div>
+              <div class="transition-details">
+                <div class="transition-detail">
+                  <span>Previous State</span>
+                  <strong id="transition-previous-label">S0</strong>
+                  <small id="transition-previous-meaning">เงินสะสม 0 บาท</small>
+                </div>
+                <div class="transition-detail transition-detail--input">
+                  <span>Input</span>
+                  <strong id="transition-input">รอ Input</strong>
+                </div>
+                <div class="transition-detail transition-detail--current">
+                  <span>Current State</span>
+                  <strong id="transition-current-label">S0</strong>
+                  <small id="transition-current-meaning">เงินสะสม 0 บาท</small>
+                </div>
+              </div>
+              <div class="transition-result">
+                <span class="transition-result__label">Output</span>
+                <div class="transition-result__value">
+                  <strong id="transition-output-symbol">—</strong>
+                  <span id="transition-output-separator" aria-hidden="true" hidden>—</span>
+                  <span id="transition-output">รอการทำงาน</span>
+                </div>
+              </div>
+              <div class="transition-history">
+                <span class="transition-history__label">Recent Transitions</span>
+                <div class="transition-history__table-wrap">
+                  <table>
+                    <thead>
+                      <tr><th>#</th><th>Transition</th><th>Input</th><th>Output</th></tr>
+                    </thead>
+                    <tbody id="transition-history">
+                      <tr class="is-empty"><td colspan="4">ยังไม่มีประวัติ</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <a class="view-table-link" href="#transition-table">ดู Transition นี้ในตาราง <span aria-hidden="true">→</span></a>
+              <p class="visually-hidden" id="transition-announcement" role="status" aria-live="polite" aria-atomic="true"></p>
+            </section>
+            </div>
+
+            <dialog class="tips-dialog" id="play-tips-dialog" aria-labelledby="play-tips-title">
+              <div class="tips-dialog__header">
+                <div>
+                  <span>SNACK STATION</span>
+                  <h4 id="play-tips-title">Tips การเล่น</h4>
+                  <p>ใช้เวลาประมาณ 1 นาที</p>
+                </div>
+                <button class="tips-dialog__close" id="close-tips" type="button" aria-label="ปิดวิธีเล่น" title="ปิด">×</button>
+              </div>
+              <ol class="tips-dialog__list">
+                <li><span>1</span><p>กดเหรียญ <strong>5 หรือ 10 บาท</strong> เพื่อสะสมยอดให้ครบ 20 บาท</p></li>
+                <li><span>2</span><p>เมื่อไฟเป็น <strong>สีเขียว</strong> และหน้าจอขึ้น SELECT ITEM ให้เลือกสินค้า</p></li>
+                <li><span>3</span><p>กด <strong>O</strong> เลือกคอร์เน่ หรือ <strong>R</strong> เลือกปาร์ตี้</p></li>
+                <li><span>4</span><p>ดูผลที่ OUTPUT แล้วเทียบช่องสีเหลืองกับ State สีเขียวในตาราง</p></li>
+              </ol>
+            </dialog>
+
+          </div>
+
+          <div class="card diagram-card">
+            <div class="diagram-heading">
+              <div>
+                <h3>State Diagram & Transition Table</h3>
+                <p>Diagram แสดง current state ส่วน table แสดง rule ทั้งหมด</p>
+              </div>
+            </div>
+
+            <div class="svg-container">
+              <svg id="fsm-svg" role="img" viewBox="0 0 500 104" width="100%" aria-labelledby="fsm-svg-title fsm-svg-desc">
+                <title id="fsm-svg-title">State diagram from S0 to S4</title>
+                <desc id="fsm-svg-desc">แผนภาพ state ปัจจุบันของตู้ขายขนมตั้งแต่ s0 ถึง s4</desc>
+                <path d="M 50 36 L 450 36" class="state-track" />
+                <line id="transition-pulse" x1="50" y1="36" x2="50" y2="36" class="transition-pulse" />
+
+                <circle id="node-s0" cx="50" cy="36" r="16" class="state-node active" />
+                <text x="50" y="40" text-anchor="middle" class="state-text">s0</text>
+                <text x="50" y="78" text-anchor="middle" class="state-label"><tspan x="50">s0</tspan><tspan x="50" dy="12">0 บาท</tspan></text>
+
+                <circle id="node-s1" cx="150" cy="36" r="16" class="state-node" />
+                <text x="150" y="40" text-anchor="middle" class="state-text">s1</text>
+                <text x="150" y="78" text-anchor="middle" class="state-label"><tspan x="150">s1</tspan><tspan x="150" dy="12">5 บาท</tspan></text>
+
+                <circle id="node-s2" cx="250" cy="36" r="16" class="state-node" />
+                <text x="250" y="40" text-anchor="middle" class="state-text">s2</text>
+                <text x="250" y="78" text-anchor="middle" class="state-label"><tspan x="250">s2</tspan><tspan x="250" dy="12">10 บาท</tspan></text>
+
+                <circle id="node-s3" cx="350" cy="36" r="16" class="state-node" />
+                <text x="350" y="40" text-anchor="middle" class="state-text">s3</text>
+                <text x="350" y="78" text-anchor="middle" class="state-label"><tspan x="350">s3</tspan><tspan x="350" dy="12">15 บาท</tspan></text>
+
+                <circle id="node-s4" cx="450" cy="36" r="16" class="state-node" />
+                <text x="450" y="40" text-anchor="middle" class="state-text">s4</text>
+                <text x="450" y="78" text-anchor="middle" class="state-label"><tspan x="450">s4</tspan><tspan x="450" dy="12">20 บาท</tspan></text>
+              </svg>
+            </div>
+
+
+            <div class="table-container" id="transition-table" tabindex="0" role="region" aria-label="ตาราง State Transition เลื่อนได้ในแนวนอน">
+              <p class="table-scroll-hint">เลื่อนตารางในแนวนอนเพื่อดู Input ทั้งหมด</p>
+              <table class="state-table">
+                <caption>State Transition rules ของ Vending Machine</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" rowspan="2">State (เงินสะสม)</th>
+                    <th scope="col" colspan="4">Next State / Output (เมื่อรับ Input)</th>
+                  </tr>
+                  <tr>
+                    <th scope="col" data-input="5">เหรียญ 5</th>
+                    <th scope="col" data-input="10">เหรียญ 10</th>
+                    <th scope="col" data-input="O">ปุ่มส้ม (O)</th>
+                    <th scope="col" data-input="R">ปุ่มแดง (R)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="row-s0">
+                    <th scope="row"><strong>s0</strong> (0 บาท)</th>
+                    <td data-input="5">s1 / n</td>
+                    <td data-input="10">s2 / n</td>
+                    <td data-input="O">s0 / แนะนำหยอดเหรียญ</td>
+                    <td data-input="R">s0 / แนะนำหยอดเหรียญ</td>
+                  </tr>
+                  <tr id="row-s1">
+                    <th scope="row"><strong>s1</strong> (5 บาท)</th>
+                    <td data-input="5">s2 / n</td>
+                    <td data-input="10">s3 / n</td>
+                    <td data-input="O">s1 / แนะนำหยอดเหรียญ</td>
+                    <td data-input="R">s1 / แนะนำหยอดเหรียญ</td>
+                  </tr>
+                  <tr id="row-s2">
+                    <th scope="row"><strong>s2</strong> (10 บาท)</th>
+                    <td data-input="5">s3 / n</td>
+                    <td data-input="10">s4 / n</td>
+                    <td data-input="O">s2 / แนะนำหยอดเหรียญ</td>
+                    <td data-input="R">s2 / แนะนำหยอดเหรียญ</td>
+                  </tr>
+                  <tr id="row-s3">
+                    <th scope="row"><strong>s3</strong> (15 บาท)</th>
+                    <td data-input="5">s4 / n</td>
+                    <td data-input="10">s4 / ทอน 5 บาท</td>
+                    <td data-input="O">s3 / แนะนำหยอดเหรียญ</td>
+                    <td data-input="R">s3 / แนะนำหยอดเหรียญ</td>
+                  </tr>
+                  <tr id="row-s4">
+                    <th scope="row"><strong>s4</strong> (20 บาท)</th>
+                    <td data-input="5">s4 / คืนเหรียญ 5</td>
+                    <td data-input="10">s4 / คืนเหรียญ 10</td>
+                    <td data-input="O">s0 / คอร์เน่</td>
+                    <td data-input="R">s0 / ปาร์ตี้</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <article class="lesson-flow fsm-reflection">
+          <section class="lesson-section">
+            <span class="lesson-label">Reading the Table</span>
+            <h2>State table อ่านอย่างไร</h2>
+            <p>แต่ละช่องของตารางอยู่ในรูป <code>next state / output</code> เช่น <code>s3 + input 10 → s4 / ทอน 5 บาท</code> หมายความว่าเมื่อสะสมเงิน 15 บาทแล้วหยอด 10 บาท เครื่องจะไปที่ state พร้อมเลือกสินค้าและทอน 5 บาท</p>
+          </section>
+
+          <section class="lesson-section practice-prompts">
+            <span class="lesson-label">Check Yourself</span>
+            <h2>ลองตอบก่อนเรียนบทถัดไป</h2>
+            <ol>
+              <li>ถ้าอยู่ที่ <code>s2</code> แล้วหยอด 10 บาท จะเกิดอะไรขึ้น</li>
+              <li>ถ้าอยู่ที่ <code>s4</code> แล้วกด <code>R</code> จะได้ output อะไร</li>
+              <li>ถ้ากดสินค้าในขณะที่เงินยังไม่ครบ 20 บาท เครื่องควรตอบกลับอย่างไร</li>
+            </ol>
+          </section>
+
+          <nav class="lesson-navigation" aria-label="Lesson navigation">
+            <div class="lesson-navigation__previous">
+              <span>Previous Lesson</span>
+              <a class="lesson-action lesson-action--secondary" href="introduction.html">← กลับไป Introduction</a>
+            </div>
+            <div class="lesson-navigation__next">
+              <span>Next Lesson</span>
+              <a class="lesson-action lesson-action--primary" href="working-fsm.html">เรียน Working with FSM →</a>
+            </div>
+          </nav>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/sidebar.js?v=multi-page"></script>
+  <script src="scripts/vendingMachine.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
