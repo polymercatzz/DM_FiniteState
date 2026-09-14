@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DM: Language Recognition</title>
-  <link rel="stylesheet" href="styles/base.css?v=layout-fill-2">
-  <link rel="stylesheet" href="styles/sidebar.css?v=sidebar-polish-1">
-  <link rel="stylesheet" href="styles/challenge-sections.css?v=language-ux-1">
+  <link rel="stylesheet" href="../styles/base.css?v=string-controls-2">
+  <link rel="stylesheet" href="../styles/sidebar.css?v=string-controls-2">
+  <link rel="stylesheet" href="../styles/challenge-sections.css?v=string-controls-2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -39,7 +39,7 @@
       <nav class="sidebar-nav" aria-label="เมนูบทเรียน">
         <div class="sidebar-section">
           <p class="sidebar-section-title">Root</p>
-          <a href="index.html" class="nav-link" data-page="home">
+          <a href="../index.html" class="nav-link" data-page="home">
             <span class="nav-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M12 3v18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -52,7 +52,7 @@
               <small>Study guide root</small>
             </span>
           </a>
-          <a href="introduction.html" class="nav-link" data-page="intro">
+          <a href="../pages/introduction.html" class="nav-link" data-page="intro">
             <span class="nav-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M12 3l7 4v10l-7 4-7-4V7l7-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -69,7 +69,7 @@
 
         <div class="sidebar-section">
           <p class="sidebar-section-title">Finite-State Machines</p>
-          <a href="fsm-output.html" class="nav-link" data-page="fsm-output">
+          <a href="../pages/fsm-output.html" class="nav-link" data-page="fsm-output">
             <span class="nav-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <circle cx="7" cy="12" r="2" stroke="currentColor" stroke-width="1.8"/>
@@ -83,7 +83,7 @@
               <small>Live vending lab</small>
             </span>
           </a>
-          <a href="working-fsm.html" class="nav-link" data-page="working-fsm">
+          <a href="../pages/working-fsm.html" class="nav-link" data-page="working-fsm">
             <span class="nav-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M5 6h9a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -96,7 +96,7 @@
               <small>String simulator</small>
             </span>
           </a>
-          <a href="recognition-fsm.html" class="nav-link" data-page="recognition-fsm">
+          <a href="../pages/recognition-fsm.html" class="nav-link" data-page="recognition-fsm">
             <span class="nav-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M4 12h4l2-5 4 10 2-5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -109,7 +109,7 @@
               <small>Substring 111</small>
             </span>
           </a>
-          <a href="fsa.html" class="nav-link" data-page="fsa">
+          <a href="../pages/fsa.html" class="nav-link" data-page="fsa">
             <span class="nav-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
@@ -123,7 +123,7 @@
               <small>Final-state decision</small>
             </span>
           </a>
-          <a href="language-recognition.html" class="nav-link" data-page="language-recognition">
+          <a href="../pages/language-recognition.html" class="nav-link" data-page="language-recognition">
             <span class="nav-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M5 7h14M5 12h10M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -135,7 +135,7 @@
               <small>L(M) membership</small>
             </span>
           </a>
-          <a href="designing-fsa.html" class="nav-link" data-page="designing-fsa">
+          <a href="../pages/designing-fsa.html" class="nav-link" data-page="designing-fsa">
             <span class="nav-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M5 6h14M5 12h14M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -157,22 +157,23 @@
           <span class="hero-kicker">Lesson 06</span>
           <h1>Language Recognition</h1>
           <p>จากการตรวจ string ทีละตัว เราจะขยับมามองว่าเครื่อง <code>M</code> ยอมรับ strings ใดบ้าง และ strings เหล่านั้นรวมกันเป็น language ของเครื่องได้อย่างไร</p>
-          <div class="language-hero__actions" aria-label="ทางลัดบทเรียน">
+          <div class="language-hero__actions lesson-header-actions" aria-label="ทางลัดบทเรียน">
             <a class="lesson-action lesson-action--primary" href="#language-lab">ทดสอบ x ∈ L(M)</a>
             <a class="lesson-action lesson-action--secondary" href="#language-definition">ทบทวนนิยาม L(M)</a>
           </div>
-          <div class="membership-pipeline" aria-label="ลำดับการตรวจ membership">
-            <span>String x</span><i aria-hidden="true">→</i>
-            <span>Read every symbol</span><i aria-hidden="true">→</i>
-            <span>End state</span><i aria-hidden="true">→</i>
-            <span>Compare with F</span><i aria-hidden="true">→</i>
-            <span>Membership result</span>
-          </div>
         </header>
+        <div class="membership-pipeline" aria-label="ลำดับการตรวจ membership">
+          <span>String x</span><i aria-hidden="true">→</i>
+          <span>Read every symbol</span><i aria-hidden="true">→</i>
+          <span>End state</span><i aria-hidden="true">→</i>
+          <span>Compare with F</span><i aria-hidden="true">→</i>
+          <span>Membership result</span>
+        </div>
+
 
         <article class="recognition-definition" id="language-definition" aria-labelledby="recognition-definition-title">
           <div class="recognition-definition__intro">
-            <span class="lesson-label">นิยามสำคัญมาก</span>
+            <span class="lesson-label">นิยาม</span>
             <h2 id="recognition-definition-title">เมื่อไร string จึงถูก recognized หรือ accepted?</h2>
             <p>
               ให้ <code>x</code> เป็น input string เมื่อเครื่องอ่าน <code>x</code> จนครบแล้ว
@@ -233,13 +234,6 @@
                   วิธีเล่น
                 </button>
               </div>
-              <p>เลือก machine แล้วกด chip เพื่อสร้าง string จากนั้นกด <strong>Test</strong> เพื่อดูการทำงานทีละ step</p>
-              <ol class="language-workflow" aria-label="ขั้นตอนการตรวจ membership">
-                <li><span>01</span><strong>Choose M</strong><small>เลือก machine / language</small></li>
-                <li><span>02</span><strong>Build x</strong><small>ต่อ 0, 1 หรือ epsilon</small></li>
-                <li><span>03</span><strong>Test</strong><small>อ่านทุก symbol</small></li>
-                <li><span>04</span><strong>Decide</strong><small>เทียบ end state กับ F</small></li>
-              </ol>
             </div>
 
             <form class="language-form" id="language-form" novalidate>
@@ -249,29 +243,24 @@
                 <select id="machine-select">
                   <option value="ones">{1}*</option>
                   <option value="finite">{1, 01}</option>
-                  <option value="zero-or-10">{0}* U {0}*{10}{0,1}*</option>
+                  <option value="zero-or-10">0* ∪ 0*10{0,1}*</option>
                 </select>
               </label>
 
               <div class="language-step-label">02 Build String x</div>
               <label class="field-group" for="language-input">
                 <span>String x</span>
-                <input id="language-input" type="text" value="epsilon" readonly aria-describedby="language-input-hint epsilon-note language-error">
+                <input id="language-input" type="text" value="epsilon" readonly aria-describedby="epsilon-note language-error">
               </label>
-              <p class="language-input-hint" id="language-input-hint">สร้าง string ด้วยปุ่มด้านล่าง ช่องนี้ใช้แสดงผลและพิมพ์ไม่ได้</p>
 
               <div class="string-chip-builder" aria-label="ปุ่มสำหรับสร้าง String x">
-                <div class="string-chip-builder__group" role="group" aria-label="Symbol actions">
-                  <span class="string-chip-builder__label">Symbols · ต่อ x</span>
-                  <div class="string-chip-builder__buttons">
+                <div class="string-controls">
+                  <div class="string-controls__symbols" role="group" aria-label="เพิ่มตัวเลข">
                     <button class="string-chip" type="button" data-string-action="append" data-symbol="0">0</button>
                     <button class="string-chip" type="button" data-string-action="append" data-symbol="1">1</button>
-                    <button class="string-chip string-chip--utility" type="button" data-string-action="epsilon">&epsilon; epsilon</button>
+                    <button class="string-chip string-chip--utility" type="button" data-string-action="epsilon" aria-label="ใช้ string ว่าง epsilon">&epsilon;</button>
                   </div>
-                </div>
-                <div class="string-chip-builder__group string-chip-builder__group--editing" role="group" aria-label="Editing actions">
-                  <span class="string-chip-builder__label">Edit · แก้ไข x</span>
-                  <div class="string-chip-builder__buttons">
+                  <div class="string-controls__editing" role="group" aria-label="ลบตัวเลข">
                     <button class="string-chip string-chip--utility string-chip--remove" type="button" data-string-action="remove" aria-label="ลบ symbol ตัวสุดท้าย">&larr; ลบ</button>
                     <button class="string-chip string-chip--utility" type="button" data-string-action="clear">ล้าง</button>
                   </div>
@@ -307,7 +296,6 @@
               <div>
                 <span class="lesson-label">Membership Trace</span>
                 <h2 id="language-results-title">From String to Language</h2>
-                <p>ติดตาม state path แล้วตรวจว่า end state อยู่ใน <code>F</code> หรือไม่</p>
               </div>
             </header>
 
@@ -353,7 +341,6 @@
             </dl>
 
             <div class="simulation-table-wrap" tabindex="0" role="region" aria-label="ผล transition เลื่อนได้ในแนวนอน">
-              <p class="simulation-table__mobile-hint">เลื่อนตารางในแนวนอนเพื่อดูทุกคอลัมน์</p>
               <table class="language-table">
                 <caption class="visually-hidden">ตาราง transition ของการทดสอบว่า x อยู่ใน L(M) หรือไม่</caption>
                 <thead>
@@ -382,7 +369,6 @@
           </div>
           <button class="language-how-to__close" id="close-language-how-to" type="button" aria-label="ปิดวิธีเล่น" title="ปิด">×</button>
         </div>
-        <p class="language-how-to__duration">ใช้เวลาประมาณ 1 นาที</p>
           <ol class="language-how-to__steps">
             <li><span>1</span><p>เลือก <strong>Machine / Language</strong> ที่ต้องการทดสอบจากรายการ</p></li>
             <li><span>2</span><p>สร้าง <strong>String x</strong> โดยกด chip <strong>0</strong> และ <strong>1</strong> หรือเลือก <strong>epsilon</strong> สำหรับ string ว่าง</p></li>
@@ -425,11 +411,11 @@
           <nav class="lesson-navigation" aria-label="Lesson navigation">
             <div class="lesson-navigation__previous">
               <span>Previous Lesson</span>
-              <a class="lesson-action lesson-action--secondary" href="fsa.html">← กลับไป FSA</a>
+              <a class="lesson-action lesson-action--secondary" href="../pages/fsa.html">← กลับไป FSA</a>
             </div>
             <div class="lesson-navigation__next">
               <span>Next Lesson</span>
-              <a class="lesson-action lesson-action--primary" href="designing-fsa.html">เรียน Designing FSA →</a>
+              <a class="lesson-action lesson-action--primary" href="../pages/designing-fsa.html">เรียน Designing FSA →</a>
             </div>
           </nav>
         </article>
@@ -437,8 +423,8 @@
     </main>
   </div>
 
-  <script src="scripts/sidebar.js?v=multi-page"></script>
-  <script src="scripts/languageChallenge.js?v=language-how-to-1"></script>
+  <script src="../scripts/sidebar.js?v=multi-page"></script>
+  <script src="../scripts/languageChallenge.js?v=language-how-to-1"></script>
 </body>
 
 </html>

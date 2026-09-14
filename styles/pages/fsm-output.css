@@ -1,85 +1,13 @@
 /* ---------------- Lesson 02: interactive teaching lab ---------------- */
 #page-fsm-output {
     width: 100%;
-    max-width: 1400px;
+    max-width: none;
     margin-inline: auto;
 }
 
-#page-fsm-output .fsm-hero {
-    margin-bottom: clamp(24px, 3vw, 36px);
-    padding: 4px 0 26px;
-    border: 0;
-    border-bottom: 1px solid #cbd5e1;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-}
-
 #page-fsm-output .fsm-hero__copy {
-    max-width: 820px;
-}
-
-#page-fsm-output .hero-kicker {
-    display: inline-flex;
-    width: fit-content;
-    margin-bottom: 10px;
-    color: #0f766e;
-    font: 700 0.72rem 'Bai Jamjuree', 'Sarabun', sans-serif;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-}
-
-#page-fsm-output .fsm-hero h1 {
-    max-width: 24ch;
-    color: #0f172a;
-    font: 700 clamp(2rem, 4vw, 3.4rem)/1.08 'Bai Jamjuree', 'Sarabun', sans-serif;
-}
-
-#page-fsm-output .fsm-hero p {
-    max-width: 68ch;
-    margin-top: 14px;
-    color: #475569;
-}
-
-#page-fsm-output .fsm-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px 18px;
-    margin-top: 22px;
-}
-
-#page-fsm-output .hero-action {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    border-radius: 6px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
-}
-
-#page-fsm-output .hero-action--primary {
-    padding: 10px 16px;
-    background: #0f766e;
-    color: #ffffff;
-    box-shadow: 0 8px 18px rgba(15, 118, 110, 0.16);
-}
-
-#page-fsm-output .hero-action--primary:hover {
-    background: #0b615b;
-    transform: translateY(-1px);
-}
-
-#page-fsm-output .hero-action--secondary {
-    padding: 10px 0;
-    color: #0f766e;
-}
-
-#page-fsm-output .hero-action--secondary:hover {
-    color: #0b615b;
-    text-decoration: underline;
+    width: 100%;
+    min-width: 0;
 }
 
 #page-fsm-output .hero-action:focus-visible,
@@ -340,7 +268,7 @@
     align-items: start;
     gap: clamp(28px, 5vw, 72px);
     width: 100%;
-    max-width: 1180px;
+    max-width: none;
     margin: 28px auto 0;
 }
 
@@ -1468,50 +1396,6 @@
     text-transform: uppercase;
 }
 
-#page-fsm-output .lesson-action {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    border-radius: 6px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
-}
-
-#page-fsm-output .lesson-action--primary {
-    min-width: min(100%, 280px);
-    padding: 12px 20px;
-    background: #0f766e;
-    color: #ffffff;
-    box-shadow: 0 10px 22px rgba(15, 118, 110, 0.17);
-}
-
-#page-fsm-output .lesson-action--primary:hover {
-    background: #0b615b;
-    transform: translateY(-1px);
-}
-
-#page-fsm-output .lesson-action--secondary {
-    width: fit-content;
-    padding: 8px 0;
-    color: #64748b;
-}
-
-#page-fsm-output .lesson-action--secondary:hover {
-    color: #0f172a;
-}
-
-.visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
-}
 
 /* ---------------- Motion ---------------- */
 @keyframes coinToSlot {
@@ -1607,7 +1491,7 @@
 @media (max-width: 1120px) {
     #page-fsm-output .simulator-layout {
         grid-template-columns: 1fr;
-        max-width: 760px;
+        max-width: none;
     }
 
     #page-fsm-output .live-transition {
@@ -1768,27 +1652,11 @@
         justify-items: stretch;
         order: -1;
     }
-
-    #page-fsm-output .lesson-action--primary {
-        width: 100%;
-    }
 }
 
-@media (max-width: 480px) {
-    #page-fsm-output .fsm-hero__actions {
-        align-items: stretch;
-        flex-direction: column;
-    }
 
-    #page-fsm-output .hero-action {
-        width: 100%;
-    }
-}
 
 @media (max-width: 420px) {
-    #page-fsm-output .fsm-hero h1 {
-        font-size: clamp(1.95rem, 10vw, 2.6rem);
-    }
 
     #page-fsm-output .card-header-row {
         flex-direction: column;

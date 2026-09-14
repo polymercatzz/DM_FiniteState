@@ -1,31 +1,9 @@
-/* ---------------- Lesson 04: FSM Recognition ---------------- */
-#page-recognition-fsm .content-header.recognition-hero {
-    margin-bottom: clamp(22px, 3vw, 34px);
-    padding: 4px 0 24px;
-    border-bottom: 1px solid #cbd5e1;
-}
 
-#page-recognition-fsm .hero-kicker {
-    display: inline-flex;
-    width: fit-content;
-    margin-bottom: 10px;
-    color: #0f766e;
-    font: 700 0.72rem 'Bai Jamjuree', 'Sarabun', sans-serif;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
 
 #page-recognition-fsm .content-header.recognition-hero h1,
 #page-recognition-fsm .recognition-lab h2,
 #page-recognition-fsm .sort-activity h2 {
     font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
-}
-
-#page-recognition-fsm .content-header.recognition-hero h1 {
-    max-width: 24ch;
-    color: #0f172a;
-    font-size: clamp(2rem, 4vw, 3.35rem);
-    line-height: 1.08;
 }
 
 #page-recognition-fsm .content-header.recognition-hero code {
@@ -40,9 +18,9 @@
 #page-recognition-fsm .recognition-lab {
     display: grid;
     grid-template-columns: minmax(300px, 0.68fr) minmax(0, 1fr);
-    gap: clamp(20px, 3vw, 32px);
-    max-width: 1180px;
-    margin: clamp(20px, 3vw, 32px) 0;
+    gap: var(--section-space);
+    max-width: none;
+    margin: var(--section-space) 0;
 }
 
 #page-recognition-fsm .recognition-panel,
@@ -57,7 +35,7 @@
 
 #page-recognition-fsm .recognition-panel--control {
     position: relative;
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: var(--panel-space);
 }
 
 #page-recognition-fsm .recognition-panel--control::before {
@@ -463,9 +441,9 @@
 #page-recognition-fsm .sort-activity {
     display: grid;
     gap: 18px;
-    max-width: 1180px;
+    max-width: none;
     margin: clamp(20px, 3vw, 34px) 0;
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: var(--panel-space);
 }
 
 #page-recognition-fsm .sort-list {
@@ -603,34 +581,10 @@
     }
 }
 
-/* ---------------- Lesson 06: Language Recognition ---------------- */
-#page-language-recognition .content-header.language-hero {
-    margin-bottom: clamp(22px, 3vw, 34px);
-    padding: 4px 0 24px;
-    border-bottom: 1px solid #cbd5e1;
-}
-
-#page-language-recognition .hero-kicker {
-    display: inline-flex;
-    width: fit-content;
-    margin-bottom: 10px;
-    color: #0f766e;
-    font: 700 0.72rem 'Bai Jamjuree', 'Sarabun', sans-serif;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
 #page-language-recognition .content-header.language-hero h1,
 #page-language-recognition .language-lab h2,
 #page-language-recognition .guess-language-activity h2 {
     font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
-}
-
-#page-language-recognition .content-header.language-hero h1 {
-    max-width: 24ch;
-    color: #0f172a;
-    font-size: clamp(2rem, 4vw, 3.35rem);
-    line-height: 1.08;
 }
 
 #page-language-recognition code {
@@ -780,9 +734,9 @@
 #page-language-recognition .language-lab {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: clamp(20px, 3vw, 32px);
-    max-width: 1180px;
-    margin: clamp(20px, 3vw, 32px) 0;
+    gap: var(--section-space);
+    max-width: none;
+    margin: var(--section-space) 0;
 }
 
 #page-language-recognition .language-panel,
@@ -797,7 +751,7 @@
 
 #page-language-recognition .language-panel--control {
     position: relative;
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: var(--panel-space);
 }
 
 #page-language-recognition .language-panel--control::before {
@@ -1000,18 +954,9 @@
     background: #f8fafc;
 }
 
-#page-language-recognition .string-chip-builder__label {
-    color: #64748b;
-    font: 700 0.72rem 'Bai Jamjuree', 'Sarabun', sans-serif;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
 
-#page-language-recognition .string-chip-builder__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
+
+
 
 #page-language-recognition .string-chip {
     display: inline-flex;
@@ -1369,9 +1314,9 @@
 #page-language-recognition .guess-language-activity {
     display: grid;
     gap: 18px;
-    max-width: 1180px;
+    max-width: none;
     margin: clamp(20px, 3vw, 34px) 0;
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: var(--panel-space);
 }
 
 #page-language-recognition .guess-grid {
@@ -1535,35 +1480,11 @@
     max-width: none;
 }
 
-/* ---------------- Lesson 07: Designing FSA ---------------- */
-#page-designing-fsa .content-header.designing-hero {
-    margin-bottom: clamp(22px, 3vw, 34px);
-    padding: 4px 0 24px;
-    border-bottom: 1px solid #cbd5e1;
-}
-
-#page-designing-fsa .hero-kicker {
-    display: inline-flex;
-    width: fit-content;
-    margin-bottom: 10px;
-    color: #0f766e;
-    font: 700 0.72rem 'Bai Jamjuree', 'Sarabun', sans-serif;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
 #page-designing-fsa .content-header.designing-hero h1,
 #page-designing-fsa .builder-lab h2,
 #page-designing-fsa .builder-results h2,
 #page-designing-fsa .hint-card h3 {
     font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
-}
-
-#page-designing-fsa .content-header.designing-hero h1 {
-    max-width: 24ch;
-    color: #0f172a;
-    font-size: clamp(2rem, 4vw, 3.35rem);
-    line-height: 1.08;
 }
 
 #page-designing-fsa code {
@@ -1579,8 +1500,8 @@
     display: grid;
     gap: 16px;
     width: 100%;
-    margin: clamp(20px, 3vw, 32px) 0;
-    padding: clamp(18px, 2.4vw, 28px);
+    margin: var(--section-space) 0;
+    padding: var(--panel-space);
     border: 1px solid rgba(15, 118, 110, 0.22);
     border-radius: var(--radius-card);
     background: linear-gradient(145deg, #f0fdfa, #ffffff 58%);
@@ -1732,8 +1653,8 @@
     display: grid;
     width: 100%;
     max-width: none;
-    gap: clamp(20px, 3vw, 32px);
-    margin: clamp(20px, 3vw, 32px) 0;
+    gap: var(--section-space);
+    margin: var(--section-space) 0;
 }
 
 #page-designing-fsa .builder-lab {
@@ -1757,7 +1678,7 @@
 #page-designing-fsa .builder-panel--builder,
 #page-designing-fsa .builder-panel--results,
 #page-designing-fsa .builder-panel--path {
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: var(--panel-space);
 }
 
 #page-designing-fsa .builder-panel--control,
@@ -2310,36 +2231,9 @@
 /* ---------------- Lesson 07: FSA Design Studio refinement ---------------- */
 #page-designing-fsa {
     width: 100%;
-    max-width: 1320px;
+    max-width: none;
     margin: 0 auto;
     overflow-x: hidden;
-}
-
-#page-designing-fsa .content-header.designing-hero {
-    padding: clamp(8px, 1.5vw, 18px) 0 clamp(24px, 3vw, 34px);
-}
-
-#page-designing-fsa .content-header.designing-hero > p {
-    max-width: 72ch;
-}
-
-#page-designing-fsa .designing-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-#page-designing-fsa .designing-hero__actions .lesson-action {
-    min-width: 0;
-    min-height: 44px;
-    padding: 10px 16px;
-}
-
-#page-designing-fsa .designing-hero__actions .lesson-action--secondary {
-    border: 1px solid #cbd5e1;
-    border-radius: var(--radius-control);
-    background: #ffffff;
 }
 
 #page-designing-fsa .design-process-map {
@@ -2399,13 +2293,13 @@
 #page-designing-fsa .builder-results,
 #page-designing-fsa .designing-reflection {
     width: 100%;
-    max-width: 1320px;
+    max-width: none;
 }
 
 #page-designing-fsa .design-challenge-picker {
     gap: 18px;
     margin: clamp(22px, 3vw, 34px) auto;
-    padding: clamp(20px, 3vw, 32px);
+    padding: var(--section-space);
 }
 
 #page-designing-fsa .design-challenge-picker__note {
@@ -3018,14 +2912,6 @@
 }
 
 @media (max-width: 700px) {
-    #page-designing-fsa .designing-hero__actions {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    #page-designing-fsa .designing-hero__actions .lesson-action {
-        width: 100%;
-    }
 
     #page-designing-fsa .design-process-map {
         grid-template-columns: 1fr;
@@ -3629,42 +3515,20 @@
 /* Recognition pattern lab refinements — scoped to Lesson 04 only. */
 #page-recognition-fsm {
     width: 100%;
-    max-width: 1400px;
+    max-width: none;
     margin-inline: auto;
 }
 
-#page-recognition-fsm .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
 
 #page-recognition-fsm .content-header.recognition-hero > p,
 #page-recognition-fsm .recognition-reflection .lesson-section p {
-    max-width: 74ch;
+    max-width: 72ch;
 }
 
 #page-recognition-fsm .recognition-reflection {
     width: 100%;
-    max-width: 1240px;
+    max-width: none;
     margin: clamp(26px, 4vw, 44px) auto 0;
-}
-
-#page-recognition-fsm .recognition-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
-}
-
-#page-recognition-fsm .recognition-hero__actions .lesson-action {
-    min-height: 44px;
 }
 
 #page-recognition-fsm .recognition-lab {
@@ -3672,9 +3536,9 @@
     grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
     align-items: stretch;
     width: 100%;
-    max-width: 1240px;
-    margin: clamp(24px, 4vw, 44px) auto;
-    gap: clamp(20px, 3vw, 32px);
+    max-width: none;
+    margin: var(--section-space) auto;
+    gap: var(--section-space);
 }
 
 #page-recognition-fsm .recognition-panel,
@@ -4161,8 +4025,8 @@
 
 #page-recognition-fsm .sort-activity {
     width: 100%;
-    max-width: 1240px;
-    margin: clamp(24px, 4vw, 44px) auto;
+    max-width: none;
+    margin: var(--section-space) auto;
     gap: 8px;
 }
 
@@ -4475,13 +4339,6 @@
 }
 
 @media (max-width: 480px) {
-    #page-recognition-fsm .recognition-hero__actions {
-        flex-direction: column;
-    }
-
-    #page-recognition-fsm .recognition-hero__actions .lesson-action {
-        width: 100%;
-    }
 
     #page-recognition-fsm .recognition-panel__heading-row,
     #page-recognition-fsm .simulation-heading {
@@ -4522,7 +4379,7 @@
 /* ---------------- Lesson 06 UX refinement: Language Membership Lab ---------------- */
 #page-language-recognition {
     width: 100%;
-    max-width: 1400px;
+    max-width: none;
     margin-inline: auto;
 }
 
@@ -4532,23 +4389,8 @@
 #page-language-recognition .guess-language-activity,
 #page-language-recognition .language-reflection {
     width: 100%;
-    max-width: 1240px;
+    max-width: none;
     margin-inline: auto;
-}
-
-#page-language-recognition .content-header.language-hero > p {
-    max-width: 72ch;
-}
-
-#page-language-recognition .language-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-#page-language-recognition .language-hero__actions .lesson-action {
-    min-height: 44px;
 }
 
 #page-language-recognition .membership-pipeline {
@@ -4749,23 +4591,13 @@
     background: transparent;
 }
 
-#page-language-recognition .string-chip-builder__group {
-    display: grid;
-    gap: 8px;
-}
 
-#page-language-recognition .string-chip-builder__group--editing {
-    padding-top: 14px;
-    border-top: 1px solid #dbe4ee;
-}
 
-#page-language-recognition .string-chip-builder__label {
-    color: #64748b;
-}
 
-#page-language-recognition .string-chip-builder__buttons {
-    gap: 8px;
-}
+
+
+
+
 
 #page-language-recognition .string-chip {
     min-width: 52px;
@@ -5342,13 +5174,6 @@
 }
 
 @media (max-width: 480px) {
-    #page-language-recognition .language-hero__actions {
-        flex-direction: column;
-    }
-
-    #page-language-recognition .language-hero__actions .lesson-action {
-        width: 100%;
-    }
 
     #page-language-recognition .language-panel__heading-row {
         align-items: flex-start;
@@ -5362,13 +5187,17 @@
         width: 100%;
     }
 
-    #page-language-recognition .string-chip-builder__buttons {
+    #page-language-recognition .string-controls__symbols {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     #page-language-recognition .string-chip {
         width: 100%;
+    }
+
+    #page-language-recognition .string-controls__symbols [data-string-action="epsilon"] {
+        grid-column: 1 / -1;
     }
 
     #page-language-recognition .string-chip--utility {

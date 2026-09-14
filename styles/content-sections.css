@@ -1,19 +1,4 @@
-/* ---------------- Lesson 03: Working with FSM ---------------- */
-#page-working-fsm .content-header.working-hero {
-    margin-bottom: clamp(22px, 3vw, 34px);
-    padding: 4px 0 24px;
-    border-bottom: 1px solid #cbd5e1;
-}
 
-#page-working-fsm .hero-kicker {
-    display: inline-flex;
-    width: fit-content;
-    margin-bottom: 10px;
-    color: #0f766e;
-    font: 700 0.72rem 'Bai Jamjuree', 'Sarabun', sans-serif;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
 
 #page-working-fsm .content-header.working-hero h1,
 #page-working-fsm .working-lab h2,
@@ -21,20 +6,13 @@
     font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
 }
 
-#page-working-fsm .content-header.working-hero h1 {
-    max-width: 24ch;
-    font-size: clamp(2rem, 4vw, 3.35rem);
-    line-height: 1.08;
-    color: #0f172a;
-}
-
 #page-working-fsm .working-lab {
     display: flex;
     flex-direction: column;
-    gap: clamp(20px, 3vw, 32px);
+    gap: var(--section-space);
     width: 100%;
-    max-width: 1240px;
-    margin: clamp(24px, 4vw, 44px) auto;
+    max-width: none;
+    margin: var(--section-space) auto;
 }
 
 #page-working-fsm .working-lab__panel {
@@ -48,7 +26,7 @@
 }
 
 #page-working-fsm .working-lab__panel--control {
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: var(--panel-space);
 }
 
 #page-working-fsm .working-lab__panel--control::before {
@@ -734,9 +712,6 @@
 }
 
 @media (max-width: 640px) {
-    #page-working-fsm .content-header.working-hero {
-        padding-bottom: 20px;
-    }
 
     #page-working-fsm .form-actions {
         grid-template-columns: 1fr;
@@ -784,36 +759,14 @@
 /* Working FSM workbench refinements — scoped to Lesson 03 only. */
 #page-working-fsm {
     width: 100%;
-    max-width: 1400px;
+    max-width: none;
     margin-inline: auto;
 }
 
-#page-working-fsm .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
 
 #page-working-fsm .content-header.working-hero > p,
 #page-working-fsm .lesson-flow > .lesson-section > p {
-    max-width: 74ch;
-}
-
-#page-working-fsm .working-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
-}
-
-#page-working-fsm .working-hero__actions .lesson-action {
-    min-height: 44px;
+    max-width: 72ch;
 }
 
 #page-working-fsm .working-lab__header {
@@ -1283,9 +1236,6 @@
 }
 
 @media (max-width: 480px) {
-    #page-working-fsm .working-hero__actions {
-        flex-direction: column;
-    }
 
     #page-working-fsm .working-hero__actions .lesson-action,
     #page-working-fsm .form-actions__buttons,
@@ -1323,42 +1273,18 @@
     }
 }
 
-/* ---------------- Lesson 05: FSM with No Output / FSA ---------------- */
-#page-fsa .content-header.fsa-hero {
-    margin-bottom: clamp(22px, 3vw, 34px);
-    padding: 4px 0 24px;
-    border-bottom: 1px solid #cbd5e1;
-}
-
-#page-fsa .hero-kicker {
-    display: inline-flex;
-    width: fit-content;
-    margin-bottom: 10px;
-    color: #0f766e;
-    font: 700 0.72rem 'Bai Jamjuree', 'Sarabun', sans-serif;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
-
 #page-fsa .content-header.fsa-hero h1,
 #page-fsa .fsa-lab h2,
 #page-fsa .final-state-activity h2 {
     font-family: 'Bai Jamjuree', 'Sarabun', sans-serif;
 }
 
-#page-fsa .content-header.fsa-hero h1 {
-    max-width: 24ch;
-    color: #0f172a;
-    font-size: clamp(2rem, 4vw, 3.35rem);
-    line-height: 1.08;
-}
-
 #page-fsa .fsa-lab {
     display: grid;
     grid-template-columns: minmax(300px, 0.68fr) minmax(0, 1fr);
-    gap: clamp(20px, 3vw, 32px);
-    max-width: 1180px;
-    margin: clamp(20px, 3vw, 32px) 0;
+    gap: var(--section-space);
+    max-width: none;
+    margin: var(--section-space) 0;
 }
 
 #page-fsa .fsa-panel,
@@ -1373,7 +1299,7 @@
 
 #page-fsa .fsa-panel--control {
     position: relative;
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: var(--panel-space);
 }
 
 #page-fsa .fsa-panel--control::before {
@@ -1812,9 +1738,9 @@
 #page-fsa .final-state-activity {
     display: grid;
     gap: 18px;
-    max-width: 1180px;
+    max-width: none;
     margin: clamp(20px, 3vw, 34px) 0;
-    padding: clamp(18px, 2.4vw, 28px);
+    padding: var(--panel-space);
 }
 
 #page-fsa .final-state-options {
@@ -2353,7 +2279,7 @@
 /* Lesson 05 UX pass: End State Detective blueprint. Keep every rule page-scoped. */
 #page-fsa {
     width: 100%;
-    max-width: 1400px;
+    max-width: none;
     margin-inline: auto;
 }
 
@@ -2362,30 +2288,8 @@
 #page-fsa .fsa-lab,
 #page-fsa .fsa-reflection {
     width: 100%;
-    max-width: 1240px;
+    max-width: none;
     margin-inline: auto;
-}
-
-#page-fsa .content-header.fsa-hero {
-    padding-bottom: 28px;
-}
-
-#page-fsa .content-header.fsa-hero > p {
-    max-width: 72ch;
-}
-
-#page-fsa .fsa-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 22px;
-}
-
-#page-fsa .fsa-hero__actions .lesson-action {
-    display: inline-flex;
-    min-height: 44px;
-    align-items: center;
-    justify-content: center;
 }
 
 #page-fsa .fsa-decision-summary {
@@ -2445,8 +2349,15 @@
 }
 
 #page-fsa .fsa-definition-summary {
+    display: flex;
+    flex-wrap: nowrap;
     grid-column: 1 / -1;
+    overflow-x: auto;
     margin-top: 2px;
+}
+
+#page-fsa .fsa-definition-summary > div {
+    flex: 1 0 max-content;
 }
 
 #page-fsa .fsa-definition-summary > div,
@@ -3025,10 +2936,6 @@
         grid-template-columns: 1fr;
     }
 
-    #page-fsa .fsa-definition-summary {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     #page-fsa .fsa-workflow {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -3120,13 +3027,6 @@
 }
 
 @media (max-width: 480px) {
-    #page-fsa .fsa-hero__actions {
-        flex-direction: column;
-    }
-
-    #page-fsa .fsa-hero__actions .lesson-action {
-        width: 100%;
-    }
 
     #page-fsa .fsa-decision-summary {
         grid-template-columns: auto auto minmax(0, 1fr);

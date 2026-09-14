@@ -153,8 +153,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const inputLabels = {
             "5": "5 บาท",
             "10": "10 บาท",
-            "O": "O — คอร์เน่",
-            "R": "R — ปาร์ตี้",
+            "O": "ปุ่มสินค้า O — คอร์เน่",
+            "R": "ปุ่มสินค้า R — ปาร์ตี้",
             "Reset": "Reset"
         };
         const inputLabel = inputLabels[input] || input;

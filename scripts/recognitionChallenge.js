@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                     article.classList.toggle("is-correct", isCorrect);
                     article.classList.toggle("is-wrong", !isCorrect);
-                    note.textContent = `${isCorrect ? "✓ ถูกต้อง" : "! ยังไม่ใช่ — ลองใหม่ได้"}: output stream = ${result.outputStream}, last output bit = ${result.finalOutputBit}, so ${item.value} is ${item.expected === "recognized" ? "recognized" : "not recognized"}.`;
+                    note.textContent = `${isCorrect ? "✓ ถูกต้อง" : "! ยังไม่ใช่ — ลองใหม่ได้"}: output stream = ${result.outputStream}, last output bit = ${result.finalOutputBit}, ${item.value} ได้ผล ${item.expected === "recognized" ? "Recognized" : "Not recognized"}.`;
                 });
             });
             return article;

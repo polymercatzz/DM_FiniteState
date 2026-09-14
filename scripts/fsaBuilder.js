@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const challenges = {
         "begin-00": {
-            title: "Begin with two 0s",
+            title: "Begin with 00",
             shortTitle: "begin with 00",
             rule: "รับ bit string ที่ขึ้นต้นด้วย 00",
             memory: "จำ prefix สองตัวแรก",
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         "contain-00": {
-            title: "Contain two consecutive 0s",
+            title: "Contain 00",
             shortTitle: "contain 00",
             rule: "รับ bit string ที่มี 00 ติดกันอยู่ที่ไหนก็ได้",
             memory: "จำว่าตัวล่าสุดเป็น 0 และเคยพบ 00 หรือยัง",
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         "avoid-00": {
-            title: "Do not contain two consecutive 0s",
+            title: "Do not contain 00",
             shortTitle: "do not contain 00",
             rule: "รับ bit string ที่ไม่มี 00 ติดกันเลย",
             memory: "จำว่าตัวล่าสุดเป็น 0 หรือเคยทำผิดเงื่อนไขแล้ว",
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         "end-00": {
-            title: "End with two 0s",
+            title: "End with 00",
             shortTitle: "end with 00",
             rule: "รับ bit string ที่ลงท้ายด้วย 00",
             memory: "จำ suffix ล่าสุดไม่เกินสองตัว",
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         "two-zeros": {
-            title: "Contain at least two 0s",
+            title: "At least two 0s",
             shortTitle: "contain at least two 0s",
             rule: "รับ bit string ที่มีเลข 0 อย่างน้อย 2 ตัว โดยไม่จำเป็นต้องติดกัน",
             memory: "นับแบบจำกัด: 0 ตัว, 1 ตัว, อย่างน้อย 2 ตัว",

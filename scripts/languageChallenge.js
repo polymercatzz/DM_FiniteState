@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         },
         "zero-or-10": {
-            title: "{0}* U {0}*{10}{0,1}*",
+            title: "0* ∪ 0*10{0,1}*",
             rule: "รับ strings ที่มีแต่ 0 หรือมี 0 กี่ตัวก็ได้แล้วตามด้วย 10 จากนั้นต่อด้วย bit ใด ๆ",
             start: "q0",
             finals: new Set(["q0", "q2"]),
